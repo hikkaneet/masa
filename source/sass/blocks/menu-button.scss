@@ -1,0 +1,110 @@
+.menu-button {
+  margin: 0;
+  padding: 0 4px 0 20px;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 30px;
+  background-color: $color-default-white;
+  min-width: 134px;
+  min-height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: 0.3s linear;
+  position: relative;
+  z-index: 1001;
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    color: $color-cerulean-blue;
+  }
+
+  &__icon-wrapper {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: $color-cerulean-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // &__icon-menu {}
+
+  &__icon-cross {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-cerulean-blue;
+
+    & .menu-button__text {
+      color: $color-default-white;
+    }
+
+    & .menu-button__icon-wrapper {
+      background-color: $color-default-white;
+
+      & svg {
+        stroke: $color-cerulean-blue;
+      }
+    }
+  }
+
+  &:active {
+    background-color: $color-cerulean-blue;
+
+    & .menu-button__text {
+      color: rgba($color: $color-default-white, $alpha: 0.7);
+    }
+
+    & .menu-button__icon-wrapper {
+      background-color: $color-default-white;
+
+      & svg {
+        stroke: rgba($color: $color-cerulean-blue, $alpha: 0.7);
+      }
+    }
+  }
+
+  &:disabled {
+    background-color: $color-transparent;
+    border-color: #a9afb7;
+    cursor: default;
+
+    & .menu-button__text {
+      color: #a9afb7;
+    }
+
+    & .menu-button__icon-wrapper {
+      background-color: #a9afb7;
+
+      & svg {
+        stroke: rgba($color: $color-default-white, $alpha: 0.6);
+      }
+    }
+  }
+
+  &--opened {
+    min-width: 286px;
+    background-color: $color-cerulean-blue;
+
+    & .menu-button__text {
+      color: $color-default-white;
+    }
+
+    & .menu-button__icon-wrapper {
+      background-color: $color-default-white;
+
+      & svg {
+        stroke: $color-cerulean-blue;
+      }
+    }
+  }
+}
