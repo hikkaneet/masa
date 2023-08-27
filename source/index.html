@@ -42,7 +42,8 @@
         <section class="hero">
           <h2 class="visually-hidden">Геройский блок</h2>
           <div class="hero__container">
-            <div class="hero__swiper swiper">
+
+            <div class="hero__swiper hero__swiper--bg swiper">
               <div class="swiper-wrapper">
 
                 <div class="swiper-slide hero__slide">
@@ -56,14 +57,103 @@
                       <img width="1440" height="800" alt="#" src="./img/hero/bg-1-d.jpg" srcset="./img/hero/bg-1-d@2x.jpg 2x" aria-hidden="true">
                     </picture>
                   </div>
-                  <div class="hero__slide-container">
+                </div>
 
+                <div class="swiper-slide hero__slide">
+                  <div class="hero__slide-bg">
+                    <picture>
+                      <source media="(max-width: 767px)" width="320" height="568" srcset="./img/hero/bg-2-m.webp 1x, ./img/hero/bg-2-m@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 1199px)" width="768" height="1024" srcset="./img/hero/bg-2-t.webp 1x, ./img/hero/bg-2-t@2x.webp 2x" type="image/webp">
+                      <source srcset="./img/hero/bg-2-d.webp 1x, ./img/hero/bg-2-d@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 767px)" width="320" height="568" srcset="./img/hero/bg-2-m.jpg 1x, ./img/hero/bg-2-m@2x.jpg 2x">
+                      <source media="(max-width: 1199px)" width="768" height="1024" srcset="./img/hero/bg-2-t.jpg 1x, ./img/hero/bg-2-t@2x.jpg 2x">
+                      <img width="1440" height="800" alt="#" src="./img/hero/bg-2-d.jpg" srcset="./img/hero/bg-2-d@2x.jpg 2x" aria-hidden="true">
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="swiper-slide hero__slide">
+                  <div class="hero__slide-bg">
+                    <picture>
+                      <source media="(max-width: 767px)" width="320" height="568" srcset="./img/hero/bg-3-m.webp 1x, ./img/hero/bg-3-m@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 1199px)" width="768" height="1024" srcset="./img/hero/bg-3-t.webp 1x, ./img/hero/bg-3-t@2x.webp 2x" type="image/webp">
+                      <source srcset="./img/hero/bg-3-d.webp 1x, ./img/hero/bg-3-d@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 767px)" width="320" height="568" srcset="./img/hero/bg-3-m.jpg 1x, ./img/hero/bg-3-m@2x.jpg 2x">
+                      <source media="(max-width: 1199px)" width="768" height="1024" srcset="./img/hero/bg-3-t.jpg 1x, ./img/hero/bg-3-t@2x.jpg 2x">
+                      <img width="1440" height="800" alt="#" src="./img/hero/bg-3-d.jpg" srcset="./img/hero/bg-3-d@2x.jpg 2x" aria-hidden="true">
+                    </picture>
                   </div>
                 </div>
 
               </div>
             </div>
-            <div class="hero__pagination swiper-pagination"></div>
+
+            <div class="hero__swiper hero__swiper--content swiper">
+              <div class="hero__pagination-wrapper">
+                <div class="hero__pagination swiper-pagination"></div>
+              </div>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide hero__slide">
+                  <p class="hero__title">Программы стажировок в&nbsp;крупнейших компаниях Израиля</p>
+                  <div class="hero__text-wrapper">
+                    <p class="hero__text">Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
+                    <div>
+                      <div class="hero__button-wrapper">
+                        <a class="hero__button button" href="#">
+                          <span class="button__text">Подробнее</span>
+                          <div class="button__icon-wrapper">
+                            <svg width="10" height="10" stroke="#ffffff">
+                              <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                            </svg>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide hero__slide">
+                  <p class="hero__title">Волонтёрские программы&nbsp;&mdash; внесите свой вклад в&nbsp;общество</p>
+                  <div class="hero__text-wrapper">
+                    <p class="hero__text">Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.</p>
+                    <div>
+                      <div class="hero__button-wrapper">
+                        <a class="hero__button button" href="#">
+                          <span class="button__text">Подробнее</span>
+                          <div class="button__icon-wrapper">
+                            <svg width="10" height="10" stroke="#ffffff">
+                              <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                            </svg>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide hero__slide">
+                  <p class="hero__title">Глобальный профессиональный опыт обучения за&nbsp;рубежом</p>
+                  <div class="hero__text-wrapper">
+                    <p class="hero__text">Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!</p>
+                    <div>
+                      <div class="hero__button-wrapper">
+                        <a class="hero__button button" href="#">
+                          <span class="button__text">Подробнее</span>
+                          <div class="button__icon-wrapper">
+                            <svg width="10" height="10" stroke="#ffffff">
+                              <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                            </svg>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                </div>
+              </div>
+
           </div>
         </section>
 

@@ -1,5 +1,11 @@
 .main-header {
   padding: 20px 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
 
   @include vp-1199 {
     padding: 30px 0;
