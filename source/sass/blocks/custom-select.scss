@@ -1,45 +1,13 @@
 .custom-select {
   position: relative;
-
-  width: 300px;
-  padding: 14px 0 28px;
-  margin: 0 0 44px 0;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 14px;
-    width: 100%;
-  }
+  width: 100%;
 
   &__label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-
-    transform: translateY(-50%);
-
-    transition: transform 0.3s ease, opacity  0.3s ease;
-
-    pointer-events: none;
-
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
-    }
-  }
-
-  &__placeholder {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-
-    transform: translateY(-50%);
-
-    transition: transform 0.3s ease, opacity 0.3s ease;
-
-    pointer-events: none;
-
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
-    }
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $color-charcoal;
+    opacity: 0.8;
   }
 
   select {
@@ -63,23 +31,22 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 48px;
-    padding: 5px 10px;
-
+    height: 50px;
+    padding: 0 20px;
     background-color: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border: 1px solid rgba($color: $color-charcoal, $alpha: 0.3);
+    border-radius: 8px;
     outline: none;
     cursor: pointer;
-
     transition: border 0.3s ease;
 
     &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
+      border: 1px solid $color-charcoal;
     }
 
+    &:active,
     &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
+      border: 1px solid $color-charcoal;
     }
 
     &:disabled {
@@ -177,15 +144,13 @@
 
   &__icon {
     flex-shrink: 0;
-    width: 20px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     margin-left: auto;
-
-    background-color: #000000;
-
-    transition: transform 0.3s ease;
-
-    clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    stroke-width: 2px;
   }
 
   &.is-disabled {

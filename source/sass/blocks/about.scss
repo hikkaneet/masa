@@ -1,0 +1,247 @@
+.about {
+  padding: 131px 0 0 0;
+
+  @include vp-1199 {
+    padding: 113px 0 0 0;
+  }
+
+  @include vp-767 {
+    padding: 72px 0 0 0;
+  }
+
+  &__container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+
+    @include vp-767 {
+      gap: 40px;
+    }
+  }
+
+  &__first-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-1199 {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__short-info {
+    width: 42%;
+
+    @include vp-1199 {
+      width: 73%;
+    }
+
+    @include vp-767 {
+      width: 76%;
+    }
+  }
+
+  &__info-title {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    color: $color-cerulean-blue;
+
+    @include vp-1199 {
+      font-size: 34px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px
+    }
+  }
+
+  &__info-text {
+    margin: 0;
+    margin: 30px 0 0;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+
+    @include vp-1199 {
+      margin: 40px 0 0;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @include vp-767 {
+      margin: 20px 0 0;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__our-goal {
+    width: 44%;
+
+    @include vp-1199 {
+      width: 73%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__goal-title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    color: $color-cerulean-blue;
+
+    @include vp-1199 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__goal-text {
+    margin: 0;
+    margin: 40px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+
+    @include vp-1199 {
+      margin: 30px 0 0;
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      margin: 20px 0 0;
+      font-size: 14px;
+    }
+  }
+
+  &__button {
+    margin: 40px 0 0;
+    width: fit-content;
+
+    @include vp-767 {
+      margin: 30px 0 0;
+      width: 100%;
+    }
+  }
+
+  &__second-wrapper {
+    padding: 70px 8%;
+    background-color: $color-cerulean-blue;
+    border-radius: 20px;
+    width: 100%;
+
+    @include vp-1199 {
+      padding: 40px 6%;
+    }
+
+    @include vp-767 {
+      padding: 20px 6%;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+    gap: 32px;
+
+    @include vp-1199 {
+      gap: 20px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__item {
+    margin: 20px 0 0 20px;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-radius: 16px;
+    border: 1px solid $color-alabaster;
+    box-sizing: border-box;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 42px;
+      height: 42px;
+      background-image: url("../../img/stack.svg#icon-star");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-color: $color-cerulean-blue;
+      background-size: 18px 22px;
+      top: -21px;
+      left: -21px;
+    }
+
+    @include vp-1199 {
+      padding: 30px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.26px;
+    text-transform: uppercase;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: 0.2px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.16px;
+    }
+  }
+
+  &__item-text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      font-size: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+}
+
+
+

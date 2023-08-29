@@ -35,8 +35,8 @@ const settings = {
     startFocus: true,
     focusBack: true,
     eventTimeout: 400,
-    openCallback: true,
-    closeCallback: true,
+    openCallback: false,
+    closeCallback: false,
   },
   'menu': {
     openCallback: openMenuCallback,

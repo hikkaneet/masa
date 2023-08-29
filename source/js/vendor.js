@@ -15,9 +15,9 @@ const initHeroSwiper = () => {
       clickable: true,
     },
     speed: 0,
-    autoplay: {
-      delay: 3000,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    // },
   });
 
   heroSwiper[0].on('slideChange', (s) => {
@@ -25,10 +25,7 @@ const initHeroSwiper = () => {
     heroSwiper[1].slideTo(s.activeIndex)
   });
 
-  heroSwiper[1].on('slideChange', (s) => {
-    // eslint-disable-next-line
-    heroSwiper[0].slideTo(s.activeIndex)
-  });
+  heroSwiper[1].allowTouchMove = false;
 };
 
 

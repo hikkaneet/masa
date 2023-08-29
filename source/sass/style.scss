@@ -19,9 +19,6 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
 @import "blocks/page";
 @import "blocks/main-header";
 @import "blocks/menu-button";
@@ -30,6 +27,10 @@
 @import "blocks/hero";
 @import "blocks/button";
 @import "blocks/about";
+@import "blocks/modal-feedback";
+@import "blocks/custom-input";
+@import "blocks/custom-toggle";
+@import "blocks/custom-select";
 @import "blocks/programs";
 @import "blocks/how-to-go";
 @import "blocks/news-and-materials";
