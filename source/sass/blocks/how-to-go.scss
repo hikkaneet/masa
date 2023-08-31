@@ -1,0 +1,154 @@
+.how-to-go {
+  padding: 120px 0;
+  background-color: $color-cerulean-blue;
+
+  @include vp-1199 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 67px 0;
+  }
+
+  &__container {
+    display: flex;
+    gap: 138px;
+
+    @include vp-1199 {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    @include vp-767 {
+      gap: 40px;
+    }
+  }
+
+  &__short-info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    @include vp-1199 {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    margin: 30px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+
+  &__image-wrapper {
+    margin: 40px 0 0;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: $color-charcoal;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__grant-info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    @include vp-1199 {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 32px;
+font-weight: 400;
+line-height: 36px;
+color: $color-default-white;
+
+@include vp-1199 {
+  font-size: 28px;
+line-height: 28px;
+}
+
+@include vp-767 {
+  font-size: 18px;
+line-height: 22px;
+}
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 46px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 23px;
+    counter-reset: grant-counter;
+
+    @include vp-1199 {
+      flex-direction: row;
+column-gap: 47px;
+      row-gap: 25px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $color-default-white;
+    padding: 30px 25px;
+    border-radius: 16px;
+border: 1px solid $color-alabaster;
+box-sizing: border-box;
+position: relative;
+
+&::before {
+  position: absolute;
+  content: counter(grant-counter);
+  width: 42px;
+  height: 42px;
+  background-color: $color-cerulean-blue;
+  top: -21px;
+  left: -21px;
+  z-index: 2;
+  counter-increment: grant-counter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+    @include vp-1199 {
+      line-height: 20px;
+      width: 46%;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+}

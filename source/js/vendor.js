@@ -28,5 +28,33 @@ const initHeroSwiper = () => {
   heroSwiper[1].allowTouchMove = false;
 };
 
+const initProgramsSwiper = () => {
+  // eslint-disable-next-line
+  const programsSwiper = new Swiper('.programs__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 17,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 55,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 35,
+      },
+    },
+    scrollbar: {
+      el: '.programs__scrollbar',
+      hide: false,
+    },
+    navigation: {
+      nextEl: '.programs__nav-button--next',
+      prevEl: '.programs__nav-button--prev',
+    },
+    speed: 300,
+  });
+};
+
 
 initHeroSwiper();
+initProgramsSwiper();
