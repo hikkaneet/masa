@@ -55,6 +55,76 @@ const initProgramsSwiper = () => {
   });
 };
 
+const initNewsSwiper = () => {
+  // eslint-disable-next-line
+  const newsSwiper = new Swiper('.news__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    grid: {
+      rows: 2,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        grid: {
+          rows: 2,
+        },
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
+    pagination: {
+      el: '.news__pagination',
+      clickable: true,
+      // eslint-disable-next-line
+      renderBullet: function (index, className) {
+        // eslint-disable-next-line
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+    navigation: {
+      nextEl: '.news__nav-button--next',
+      prevEl: '.news__nav-button--prev',
+    },
+    speed: 300,
+  });
+
+  const tabItems = document.querySelectorAll('.news__tab-item');
+  const tabList = document.querySelector('.news__tab-list');
+
+  const newsCards = Array.from(newsSwiper.el.querySelectorAll('.news-card'));
+
+  tabList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('news__tab-item')) {
+      const selectedCategory = event.target.dataset.category;
+
+      const filteredCards = newsCards.filter((card) => {
+        const cardCategory = card.dataset.category;
+        return selectedCategory === 'all' || cardCategory === selectedCategory;
+      });
+
+      newsSwiper.removeAllSlides();
+
+      newsSwiper.appendSlide(filteredCards);
+
+      newsSwiper.update();
+
+      tabItems.forEach((item) => {
+        item.classList.remove('is-active');
+      });
+
+      event.target.classList.add('is-active');
+    }
+  });
+};
+
 
 initHeroSwiper();
 initProgramsSwiper();
+initNewsSwiper();

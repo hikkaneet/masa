@@ -1,0 +1,117 @@
+.news {
+  padding: 120px 0 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__tab-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    @include vp-1199 {
+      gap: 10px;
+    }
+
+    @include vp-767 {
+      gap: 12px;
+      overflow: auto;
+    }
+  }
+
+  &__tab-item {
+    padding: 14px 26px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    color: rgba($color-cerulean-blue, 0.6);
+    border-radius: 20px;
+    border: 1px solid $color-transparent;
+    box-sizing: border-box;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 0.24px;
+    }
+
+    &.is-active {
+      color: $color-cerulean-blue;
+      border: 1px solid $color-cerulean-blue;
+    }
+  }
+
+  &__swiper {
+    width: 100%;
+  }
+
+  // &__slide {}
+
+  &__control-wrapper {
+    min-height: 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav-button {
+    margin: 0 !important; //Переопределение стилей swiper
+    position: static !important; //Переопределение стилей swiper
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &::after {
+      display: none;
+    }
+
+    &--prev {
+      & svg {
+        transform: rotate(-135deg);
+        stroke-width: 2px;
+      }
+    }
+
+    &--next {
+      & svg {
+        transform: rotate(45deg);
+        stroke-width: 2px;
+      }
+    }
+  }
+
+  &__pagination {
+    position: static !important; //Переопределение стилей swiper
+
+    & .swiper-pagination-bullet {
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba($color-cerulean-blue, 0.5);
+      background: $color-transparent;
+      opacity: 1;
+    }
+
+    & .swiper-pagination-bullet-active {
+      color: $color-default-white;
+      background: $color-cerulean-blue;
+    }
+  }
+}

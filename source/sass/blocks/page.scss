@@ -1,6 +1,7 @@
-.page__container {
-  position: relative;
-  min-width: 320px;
+.page {
+  &__container {
+    position: relative;
+    min-width: 320px;
+    background-color: $color-alabaster;
+  }
 }
-
-

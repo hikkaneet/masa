@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {CustomSelect} from './modules/select/custom-select';
 import {Form} from './modules/form-validate/form';
+import {initAccordions} from './modules/accordion/init-accordion';
 
 // ---------------------------------
 
@@ -44,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     toggleSubmenu();
+    initAccordions();
   });
 });
 

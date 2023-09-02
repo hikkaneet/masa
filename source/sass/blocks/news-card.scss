@@ -1,0 +1,210 @@
+.news-card {
+  position: relative;
+  min-width: 286px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1199 {
+    min-width: 324px;
+    min-height: 350px;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+    min-height: 240px;
+  }
+
+  @media (min-width: 1200px) {
+    width: calc((100% - 96px) / 4) !important;
+
+    &:first-child {
+      width: calc(((100% - 96px) / 4) * 2 + 32px) !important;
+
+      & .news-card__date {
+        max-width: 13%;
+      }
+
+      & .news-card__title {
+        max-width: 48%;
+      }
+
+      & .news-card__text-wrapper {
+        max-width: 64%;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    background-color: $color-cerulean-blue;
+    border-radius: 12px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+  &__content-wrapper {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__date {
+    padding: 12px 12px 6px 0px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+    color: $color-cerulean-blue;
+    background: $color-alabaster;
+    border-radius: 0px 12px 0px 0px;
+    position: relative;
+    max-width: 28%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../../img/stack.svg#angle-16");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -16px;
+      left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../../img/stack.svg#angle-16");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      right: -16px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $color-cerulean-blue;
+    padding: 18px 18px 6px 0px;
+    border-radius: 0px 12px 0px 0px;
+    background: $color-alabaster;
+    position: relative;
+    max-width: 75%;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../../img/stack.svg#angle-16");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      right: -16px;
+    }
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 18px 15px 0px;
+    border-radius: 0 12px 0 0;
+    background: $color-alabaster;
+    max-width: 84%;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    @include vp-1199 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__link {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: $color-cerulean-blue;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      background-color: $color-default-white;
+
+      & svg {
+        stroke: $color-cerulean-blue;
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+
+      & svg {
+        stroke: rgba($color: $color-cerulean-blue, $alpha: 0.7);
+      }
+    }
+
+
+    &:disabled {
+      cursor: default;
+      background-color: #a9afb7;
+
+      & svg {
+        stroke: rgba($color: $color-default-white, $alpha: 0.6);
+      }
+    }
+  }
+}

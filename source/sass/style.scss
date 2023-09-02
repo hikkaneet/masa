@@ -2,8 +2,9 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-// Swiper 7.4.1
 @import "vendor/swiper";
+@import "vendor/data-accordion";
+@import "vendor/accordion";
 
 // Global
 // ---------------------------------
@@ -35,7 +36,8 @@
 @import "blocks/programs";
 @import "blocks/programs-card";
 @import "blocks/how-to-go";
-@import "blocks/news-and-materials";
+@import "blocks/news";
+@import "blocks/news-card";
 @import "blocks/faq";
 @import "blocks/reviews";
 @import "blocks/contacts";
