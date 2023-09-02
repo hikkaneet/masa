@@ -17,6 +17,9 @@
 @import "global/container";
 @import "global/link";
 @import "global/title";
+@import "global/nav-arrow";
+@import "global/link-icon";
+@import "global/button";
 
 // Blocks
 // ---------------------------------
@@ -27,7 +30,6 @@
 @import "blocks/modal-menu";
 @import "blocks/main-footer";
 @import "blocks/hero";
-@import "blocks/button";
 @import "blocks/about";
 @import "blocks/modal-feedback";
 @import "blocks/custom-input";

@@ -1,0 +1,58 @@
+.nav-arrow {
+  margin: 0 !important; //Переопределение стилей swiper
+  position: static !important; //Переопределение стилей swiper
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-transparent;
+  border-radius: 50%;
+
+  & svg {
+    stroke: $color-cerulean-blue;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &--prev {
+    & svg {
+      transform: rotate(-135deg);
+      stroke-width: 2px;
+    }
+  }
+
+  &--next {
+    & svg {
+      transform: rotate(45deg);
+      stroke-width: 2px;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $color-default-white;
+
+    & svg {
+      stroke: $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    background-color: $color-default-white;
+
+    & svg {
+      stroke: rgba($color-cerulean-blue, 0.7);
+    }
+  }
+
+  &:disabled {
+    background-color: $color-transparent;
+
+    & svg {
+      stroke: $color-disabled;
+    }
+  }
+}

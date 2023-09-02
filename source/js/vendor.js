@@ -48,8 +48,8 @@ const initProgramsSwiper = () => {
       hide: false,
     },
     navigation: {
-      nextEl: '.programs__nav-button--next',
-      prevEl: '.programs__nav-button--prev',
+      nextEl: '.programs__button-next',
+      prevEl: '.programs__button-prev',
     },
     speed: 300,
   });
@@ -89,8 +89,8 @@ const initNewsSwiper = () => {
       },
     },
     navigation: {
-      nextEl: '.news__nav-button--next',
-      prevEl: '.news__nav-button--prev',
+      nextEl: '.news__button-next',
+      prevEl: '.news__button-prev',
     },
     speed: 300,
   });

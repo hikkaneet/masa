@@ -40,11 +40,18 @@
     border-radius: 20px;
     border: 1px solid $color-transparent;
     box-sizing: border-box;
+    cursor: pointer;
 
     @include vp-767 {
       font-size: 12px;
       line-height: 12px;
       letter-spacing: 0.24px;
+    }
+
+    &:hover,
+    :focus {
+      border: 1px solid $color-transparent;
+      color: $color-cerulean-blue;
     }
 
     &.is-active {
@@ -57,47 +64,17 @@
     width: 100%;
   }
 
-  // &__slide {}
-
   &__control-wrapper {
     min-height: 32px;
     display: flex;
     justify-content: space-between;
   }
 
-  &__nav-button {
-    margin: 0 !important; //Переопределение стилей swiper
-    position: static !important; //Переопределение стилей swiper
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    &::after {
-      display: none;
-    }
-
-    &--prev {
-      & svg {
-        transform: rotate(-135deg);
-        stroke-width: 2px;
-      }
-    }
-
-    &--next {
-      & svg {
-        transform: rotate(45deg);
-        stroke-width: 2px;
-      }
-    }
-  }
-
   &__pagination {
     position: static !important; //Переопределение стилей swiper
 
-    & .swiper-pagination-bullet {
+    & .swiper-pagination-bullet { //Селектор необходимый, чтобы не менять файлы самого swiper
+      margin: 0 10px;
       width: 32px;
       height: 32px;
       text-align: center;
@@ -105,11 +82,35 @@
       font-size: 16px;
       font-weight: 400;
       color: rgba($color-cerulean-blue, 0.5);
+      border: 1px solid $color-transparent;
+      box-sizing: border-box;
       background: $color-transparent;
       opacity: 1;
+      user-select: none;
+
+      @include vp-767 {
+        margin: 0 8px;
+        width: 26px;
+        height: 26px;
+        font-size: 14px;
+        line-height: 26px
+      }
+
+      &:hover,
+      :focus {
+        color: $color-cerulean-blue;
+        background-color: $color-transparent;
+        border: 1px solid $color-cerulean-blue;
+      }
+
+      &:active {
+        color: $color-default-white;
+        background-color: $color-endeavour;
+        border: 1px solid $color-endeavour;
+      }
     }
 
-    & .swiper-pagination-bullet-active {
+    & .swiper-pagination-bullet-active { //Селектор необходимый, чтобы не менять файлы самого swiper
       color: $color-default-white;
       background: $color-cerulean-blue;
     }

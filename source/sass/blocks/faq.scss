@@ -36,14 +36,6 @@
     border-radius: 16px;
     border: 1px solid $color-cerulean-blue;
 
-    @include vp-1199 {
-      padding: 30px;
-    }
-
-    @include vp-767 {
-      padding: 20px;
-    }
-
     &.is-active {
       background-color: $color-cerulean-blue;
 
@@ -66,6 +58,14 @@
         & svg {
           stroke: $color-cerulean-blue;
         }
+      }
+
+      & .faq__item-button-plus {
+        display: none;
+      }
+
+      & .faq__item-button-minus {
+        display: flex;
       }
     }
   }
@@ -110,8 +110,21 @@
     box-sizing: border-box;
   }
 
+  &__item-button-plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item-button-minus {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__item-content {
     margin: 0;
+    max-width: 62%;
   }
 
   &__item-text {

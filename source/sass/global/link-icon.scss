@@ -1,0 +1,43 @@
+.link-icon {
+  width: 30px;
+  height: 30px;
+  background-color: $color-cerulean-blue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  & svg {
+    stroke: $color-default-white;
+    transform: rotate(0deg);
+  }
+
+  &:hover,
+  :focus {
+    background-color: $color-default-white;
+
+    & svg {
+      stroke: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    background-color: $color-default-white;
+
+    & svg {
+      stroke: rgba($color-cerulean-blue, 0.6);
+      transform: rotate(45deg);
+    }
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+
+    & svg {
+      stroke: rgba($color-default-white, 0.6);
+      transform: rotate(0deg);
+    }
+  }
+}

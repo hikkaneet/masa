@@ -76,32 +76,32 @@
     min-height: 22px;
   }
 
-  &__nav-button {
-    margin: 0 !important; //Переопределение стилей swiper
-    position: static !important; //Переопределение стилей swiper
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  // &__nav-button {
+  //   margin: 0 !important; //Переопределение стилей swiper
+  //   position: static !important; //Переопределение стилей swiper
+  //   width: 22px;
+  //   height: 22px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
 
 
-    &::after {
-      display: none;
-    }
+  //   &::after {
+  //     display: none;
+  //   }
 
-    &--prev {
-      & svg {
-        transform: rotate(-135deg);
-        stroke-width: 2px;
-      }
-    }
+  //   &--prev {
+  //     & svg {
+  //       transform: rotate(-135deg);
+  //       stroke-width: 2px;
+  //     }
+  //   }
 
-    &--next {
-      & svg {
-        transform: rotate(45deg);
-        stroke-width: 2px;
-      }
-    }
-  }
+  //   &--next {
+  //     & svg {
+  //       transform: rotate(45deg);
+  //       stroke-width: 2px;
+  //     }
+  //   }
+  // }
 }
