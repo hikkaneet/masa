@@ -24,6 +24,7 @@
     }
 
     @include vp-767 {
+      justify-content: flex-start;
       gap: 12px;
       overflow: auto;
     }

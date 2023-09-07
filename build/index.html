@@ -383,7 +383,7 @@
             </ul>
             <div class="news__swiper swiper">
               <div class="swiper-wrapper">
-                <div class="news-card swiper-slide" data-category="internships">
+                <div class="news-card news-card--mobile-big swiper-slide" data-category="internships">
                   <div class="news-card__bg">
                     <picture>
                       <source media="(max-width: 767px)" width="290" height="330" srcset="./img/news/img-1-tm.webp 1x, ./img/news/img-1-tm@2x.webp 2x" type="image/webp">
@@ -409,7 +409,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="news-card swiper-slide" data-category="travels">
+                <div class="news-card news-card--mobile-big swiper-slide" data-category="travels">
                   <div class="news-card__bg">
                     <picture>
                       <source media="(max-width: 767px)" width="290" height="330" srcset="./img/news/img-2-tm.webp 1x, ./img/news/img-2-tm@2x.webp 2x" type="image/webp">
@@ -435,7 +435,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="news-card swiper-slide" data-category="volunteering">
+                <div class="news-card news-card--mobile-big swiper-slide" data-category="volunteering">
                   <div class="news-card__bg">
                     <picture>
                       <source media="(max-width: 767px)" width="290" height="330" srcset="./img/news/img-3-tm.webp 1x, ./img/news/img-3-tm@2x.webp 2x" type="image/webp">
@@ -461,7 +461,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="news-card swiper-slide" data-category="career">
+                <div class="news-card news-card--mobile-big swiper-slide" data-category="career">
                   <div class="news-card__bg">
                     <picture>
                       <source media="(max-width: 767px)" width="290" height="330" srcset="./img/news/img-4-tm.webp 1x, ./img/news/img-4-tm@2x.webp 2x" type="image/webp">
@@ -729,15 +729,264 @@
         </section>
 
         <section class="reviews">
-          <div class="reviews__container container"></div>
+          <div class="reviews__container container">
+            <h2 class="reviews__title title">Отзывы</h2>
+            <div class="reviews__swiper swiper">
+              <div class="reviews__swiper-wrapper swiper-wrapper">
+
+                <div class="reviews__slide reviews-card swiper-slide">
+                  <div class="reviews-card__profile">
+                    <div class="reviews-card__user">
+                      <div class="reviews-card__avatar">
+                        <picture>
+                          <source srcset="./img/reviews/avatar-1.webp 1x, ./img/reviews/avatar-1@2x.webp 2x" type="image/webp">
+                          <img width="90" height="90" alt="Аватар пользователя." src="./img/reviews/avatar-1.png"
+                            srcset="./img/reviews/avatar-1@2x.png 2x">
+                        </picture>
+                      </div>
+                      <span class="reviews-card__user-name">Сара<br>Аврахам</span>
+                    </div>
+                    <div class="reviews-card__info-wrapper">
+                      <div class="reviews-card__program-wrapper">
+                        <span class="reviews-card__program">Программа</span>
+                        <span class="reviews-card__program-value">Masa Art Challenge</span>
+                      </div>
+                      <div class="reviews-card__date-wrapper">
+                        <span class="reviews-card__date">Дата</span>
+                        <span class="reviews-card__date-value">Осень 2022</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="reviews-card__text reviews-card__text--main">Я&nbsp;могу с&nbsp;уверенностью сказать, что это был один
+                    из&nbsp;самых незабываемых опытов в&nbsp;жизни!</p>
+                  <p class="reviews-card__text">Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем израильским студентам, желающим
+                    получить незабываемые впечатления. Сочетание путешествий, общения и&nbsp;значимой работы действительно отличает
+                    её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую огромную благодарность за&nbsp;предоставленную мне
+                    возможность.</p>
+                </div>
+
+                <div class="reviews__slide reviews-card swiper-slide">
+                  <div class="reviews-card__profile">
+                    <div class="reviews-card__user">
+                      <div class="reviews-card__avatar">
+                        <picture>
+                          <source srcset="./img/reviews/avatar-2.webp 1x, ./img/reviews/avatar-2@2x.webp 2x" type="image/webp">
+                          <img width="90" height="90" alt="Аватар пользователя." src="./img/reviews/avatar-2.png"
+                            srcset="./img/reviews/avatar-2@2x.png 2x">
+                        </picture>
+                      </div>
+                      <span class="reviews-card__user-name">Давид<br>Иммервар</span>
+                    </div>
+                    <div class="reviews-card__info-wrapper">
+                      <div class="reviews-card__program-wrapper">
+                        <span class="reviews-card__program">Программа</span>
+                        <span class="reviews-card__program-value">Volunteer Chance</span>
+                      </div>
+                      <div class="reviews-card__date-wrapper">
+                        <span class="reviews-card__date">Дата</span>
+                        <span class="reviews-card__date-value">Лето 2022</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="reviews-card__text reviews-card__text--main">Благодаря опыту стажировки я&nbsp;узнал так много нового
+                    о&nbsp;себе и&nbsp;об&nbsp;окружающем мире.</p>
+                  <p class="reviews-card__text">Каждый день был возможностью оказать ощутимое влияние на&nbsp;жизнь других людей.
+                    Я&nbsp;бы очень рекомендовал эту волонтерскую программу всем, кто ищет значимый и&nbsp;незабываемый опыт.
+                    Организация была на&nbsp;высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+                </div>
+
+                <div class="reviews__slide reviews-card swiper-slide">
+                  <div class="reviews-card__profile">
+                    <div class="reviews-card__user">
+                      <div class="reviews-card__avatar">
+                        <picture>
+                          <source srcset="./img/reviews/avatar-1.webp 1x, ./img/reviews/avatar-1@2x.webp 2x" type="image/webp">
+                          <img width="90" height="90" alt="Аватар пользователя." src="./img/reviews/avatar-1.png"
+                            srcset="./img/reviews/avatar-1@2x.png 2x">
+                        </picture>
+                      </div>
+                      <span class="reviews-card__user-name">Сара<br>Аврахам</span>
+                    </div>
+                    <div class="reviews-card__info-wrapper">
+                      <div class="reviews-card__program-wrapper">
+                        <span class="reviews-card__program">Программа</span>
+                        <span class="reviews-card__program-value">Masa Art Challenge</span>
+                      </div>
+                      <div class="reviews-card__date-wrapper">
+                        <span class="reviews-card__date">Дата</span>
+                        <span class="reviews-card__date-value">Осень 2022</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="reviews-card__text reviews-card__text--main">Я&nbsp;могу с&nbsp;уверенностью сказать, что это был один
+                    из&nbsp;самых незабываемых опытов в&nbsp;жизни!</p>
+                  <p class="reviews-card__text">Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем израильским студентам, желающим
+                    получить незабываемые впечатления. Сочетание путешествий, общения и&nbsp;значимой работы действительно отличает
+                    её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую огромную благодарность за&nbsp;предоставленную мне
+                    возможность.</p>
+                </div>
+
+                <div class="reviews__slide reviews-card swiper-slide">
+                  <div class="reviews-card__profile">
+                    <div class="reviews-card__user">
+                      <div class="reviews-card__avatar">
+                        <picture>
+                          <source srcset="./img/reviews/avatar-2.webp 1x, ./img/reviews/avatar-2@2x.webp 2x" type="image/webp">
+                          <img width="90" height="90" alt="Аватар пользователя." src="./img/reviews/avatar-2.png"
+                            srcset="./img/reviews/avatar-2@2x.png 2x">
+                        </picture>
+                      </div>
+                      <span class="reviews-card__user-name">Давид<br>Иммервар</span>
+                    </div>
+                    <div class="reviews-card__info-wrapper">
+                      <div class="reviews-card__program-wrapper">
+                        <span class="reviews-card__program">Программа</span>
+                        <span class="reviews-card__program-value">Volunteer Chance</span>
+                      </div>
+                      <div class="reviews-card__date-wrapper">
+                        <span class="reviews-card__date">Дата</span>
+                        <span class="reviews-card__date-value">Лето 2022</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="reviews-card__text reviews-card__text--main">Благодаря опыту стажировки я&nbsp;узнал так много нового
+                    о&nbsp;себе и&nbsp;об&nbsp;окружающем мире.</p>
+                  <p class="reviews-card__text">Каждый день был возможностью оказать ощутимое влияние на&nbsp;жизнь других людей.
+                    Я&nbsp;бы очень рекомендовал эту волонтерскую программу всем, кто ищет значимый и&nbsp;незабываемый опыт.
+                    Организация была на&nbsp;высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="reviews__control-wrapper">
+              <div class="reviews__scrollbar swiper-scrollbar"></div>
+              <div class="reviews__nav-buttons-wrapper">
+                <div class="reviews__button-prev nav-arrow nav-arrow--prev swiper-button-prev">
+                  <svg width="10" height="10" stroke="#316dc2">
+                    <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+                <div class="reviews__button-next nav-arrow nav-arrow--next swiper-button-next">
+                  <svg width="10" height="10" stroke="#316dc2">
+                    <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </section>
 
+        <div style="height:60px"></div>
+
         <section class="contacts">
-          <div class="contacts__container container"></div>
+          <div class="contacts__container container">
+            <div class="contacts__main-wrapper">
+              <h2 class="contacts__title title">Контакты</h2>
+              <div class="contacts__info-wrapper">
+                <div class="contacts__info-item">
+                  <span class="contacts__info-title">Центральный офис</span>
+                  <span class="contacts__info-value">г. Новосибирск, ул. Щетинкина&nbsp;68, <br>культурный центр &laquo;Бейт Менахем&raquo;</span>
+                </div>
+                <div class="contacts__info-item">
+                  <span class="contacts__info-title">Телефон</span>
+                  <a class="contacts__info-value link" href="tel:896387687676">+7 963 876 876 76</a>
+                </div>
+                <div class="contacts__info-item">
+                  <span class="contacts__info-title">E-mail</span>
+                  <a class="contacts__info-value link" href="mailto:info@masa.ru">Info@masa.ru</a>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__map-wrapper" id="map">
+              <picture>
+                <source media="(max-width: 767px)" width="290" height="240" srcset="./img/map/map-m.webp 1x, ./img/map/map-m@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 1199px)" width="678" height="500" srcset="./img/map/map-t.webp 1x, ./img/map/map-t@2x.webp 2x" type="image/webp">
+                <source srcset="./img/map/map-d.webp 1x, ./img/map/map-d@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 767px)" width="290" height="240" srcset="./img/map/map-m.jpg 1x, ./img/map/map-m@2x.jpg 2x">
+                <source media="(max-width: 1199px)" width="678" height="500" srcset="./img/map/map-t.jpg 1x, ./img/map/map-t@2x.jpg 2x">
+                <img width="1240" height="500" alt="#" src="./img/map/map-d.jpg" srcset="./img/map/map-d@2x.jpg 2x" aria-hidden="true">
+              </picture>
+            </div>
+          </div>
         </section>
 
         <section class="feedback">
-          <div class="feedback__container container"></div>
+          <div class="feedback__container container">
+            <div class="feedback__bg">
+              <picture>
+                <source media="(max-width: 1199px)" width="780" height="1024" srcset="./img/feedback/img-t.webp 1x, ./img/feedback/img-t@2x.webp 2x" type="image/webp">
+                <source srcset="./img/feedback/img-d.webp 1x, ./img/feedback/img-d@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 1199px)" width="780" height="1024" srcset="./img/feedback/img-t.jpg 1x, ./img/feedback/img-t@2x.jpg 2x">
+                <img width="1240" height="803" alt="#" src="./img/feedback/img-d.jpg" srcset="./img/feedback/img-d@2x.jpg 2x" aria-hidden="true">
+              </picture>
+            </div>
+            <div class="feedback__form-wrapper">
+              <p class="feedback__form-title">Напишите нам</p>
+          <p class="feedback__form-text">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash;
+            мы&nbsp;на&nbsp;них ответим!</p>
+              <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
+                <div class="custom-input custom-input--alt" data-validate-type="text" data-limitation="name" data-required>
+                  <label>
+                    <span class="custom-input__label">Имя</span>
+                    <input type="text" name="customer-name" required maxlength="64" autocomplete="off">
+                  </label>
+                </div>
+                <div class="custom-input custom-input--alt" data-validate-type="phone" data-required>
+                  <label>
+                    <span class="custom-input__label">Телефон</span>
+                    <input type="tel" name="customer-phone" required maxlength="32" autocomplete="off">
+                  </label>
+                </div>
+                <div class="custom-textarea custom-textarea--alt" data-validate-type="text">
+                  <label>
+                    <span class="custom-textarea__label">Ваше сообщение</span>
+                    <textarea name="user-text" class=""></textarea>
+                  </label>
+                </div>
+                <div class="feedback__select-wrapper">
+                  <span class="feedback__select-label">Выберите город</span>
+                  <div class="custom-select custom-select--alt" data-select="" data-validate-type="select" data-name="some-name"
+                    data-id="id-example-2" data-message-base="Поле обязательно к заполнению">
+                    <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span
+                        class="custom-select__text"></span><span class="custom-select__icon">
+                        <svg width="14" height="6" stroke="#484848">
+                          <use xlink:href="./img/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                      </span></button>
+                    <ul class="custom-select__list" role="listbox">
+                      <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+                        Москва</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+                        Санкт-Петербург</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+                        Краснодар</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="custom-toggle custom-toggle--alt custom-toggle--checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
+                  <label>
+                    <input type="checkbox" value="user-agreement-1" name="user-agreement">
+                    <span class="custom-toggle__icon">
+                      <svg width="8" height="6" stroke="#ffffff">
+                        <use xlink:href="./img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                    <span class="custom-toggle__label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                  </label>
+                </div>
+                <button class="feedback__submit-button button" type="submit" aria-label="Отправить форму.">
+                  <span class="button__text">Отправить</span>
+                  <div class="button__icon-wrapper">
+                    <svg width="10" height="10" stroke="#ffffff">
+                      <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
         </section>
 
         <div style="height:60px"></div>

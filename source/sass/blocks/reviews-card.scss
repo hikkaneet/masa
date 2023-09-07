@@ -1,0 +1,138 @@
+.reviews-card {
+  padding: 50px;
+  border-radius: 16px;
+  border: 1px solid $color-cerulean-blue;
+
+  @include vp-1199 {
+    max-width: 560px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    padding: 30px 15px;
+  }
+
+  &__profile {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include vp-767 {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @include vp-767 {
+      flex-grow: 1;
+      flex-shrink: 0;
+      width: 100%;
+    }
+  }
+
+  &__avatar {
+    & img {
+      background-color: #a8927b;
+      border-radius: 50%;
+    }
+
+    @include vp-767 {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__user-name {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-cerulean-blue;
+
+    @include vp-1199 {
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__program-wrapper,
+  &__date-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  &__program,
+  &__date {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+    color: $color-cerulean-blue;
+  }
+
+  &__program-value,
+  &__date-value {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    @include vp-1199 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+      opacity: 0.9;
+    }
+  }
+
+  &__text {
+    margin: 25px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+
+    @include vp-1199 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      margin: 20px 0 0;
+      font-size: 14px;
+    }
+
+    &--main {
+      margin: 30px 0 0;
+      font-size: 24px;
+      color: $color-cerulean-blue;
+
+      @include vp-1199 {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @include vp-767 {
+        margin: 25px 0 0;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+}

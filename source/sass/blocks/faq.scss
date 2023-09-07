@@ -36,6 +36,19 @@
     border-radius: 16px;
     border: 1px solid $color-cerulean-blue;
 
+    &:hover,
+    :focus-within {
+      background-color: $color-default-white;
+
+      & .faq__item-button {
+        background-color: $color-default-white;
+
+        & svg {
+          stroke: $color-cerulean-blue;
+        }
+      }
+    }
+
     &.is-active {
       background-color: $color-cerulean-blue;
 

@@ -86,4 +86,36 @@
   //     color: #15ab07;
   //   }
   // }
+
+  &--alt {
+    & .custom-input__label,
+    .custom-textarea__label {
+      color: $color-alabaster;
+    }
+
+    & input,
+    textarea {
+      border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
+      background-color: $color-cerulean-blue;
+      color: $color-default-white;
+
+      &:hover {
+        border: 1px solid $color-default-white;
+      }
+
+      &:active,
+      &:focus {
+        border: 1px solid $color-default-white;
+      }
+
+      &:disabled {
+        pointer-events: none;
+        opacity: 0.3;
+      }
+    }
+
+    & textarea {
+      min-height: 98px;
+    }
+  }
 }

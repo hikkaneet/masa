@@ -264,4 +264,17 @@
       color: #15ab07;
     }
   }
+
+  &--alt {
+    & .custom-select__button {
+      border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
+      background-color: $color-cerulean-blue;
+    }
+
+    & .custom-select__icon {
+      & svg {
+        stroke: rgba($color: $color-default-white, $alpha: 0.3);
+      }
+    }
+  }
 }

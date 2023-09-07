@@ -141,4 +141,16 @@
     //   color: #15ab07;
     // }
   }
+
+  &--alt {
+    .custom-toggle__label {
+      color: $color-alabaster;
+    }
+
+    .custom-toggle__icon {
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
 }

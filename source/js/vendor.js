@@ -1,6 +1,7 @@
 // Swiper 7.4.1
 import './vendor/swiper';
-// import './vendor/focus-visible-polyfill';
+import './vendor/focus-visible-polyfill';
+import './vendor/leaflet/leaflet';
 
 const initHeroSwiper = () => {
   // const swiperElement = document.querySelectorAll('.hero__swiper');
@@ -61,6 +62,7 @@ const initNewsSwiper = () => {
     slidesPerView: 1,
     spaceBetween: 20,
     grid: {
+      fill: 'row',
       rows: 2,
     },
     breakpoints: {
@@ -68,6 +70,7 @@ const initNewsSwiper = () => {
         slidesPerView: 2,
         spaceBetween: 30,
         grid: {
+          fill: 'row',
           rows: 2,
         },
       },
@@ -75,6 +78,7 @@ const initNewsSwiper = () => {
         slidesPerView: 3,
         spaceBetween: 32,
         grid: {
+          fill: 'row',
           rows: 1,
         },
       },
@@ -124,7 +128,57 @@ const initNewsSwiper = () => {
   });
 };
 
+const initReviewsSwiper = () => {
+  // eslint-disable-next-line
+  const reviewsSwiper = new Swiper('.reviews__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+    },
+    scrollbar: {
+      el: '.reviews__scrollbar',
+      hide: false,
+    },
+    navigation: {
+      nextEl: '.reviews__button-next',
+      prevEl: '.reviews__button-prev',
+    },
+    speed: 300,
+  });
+};
+
+const initMap = () => {
+  const mapElement = document.getElementById('map');
+
+  if (mapElement) {
+    // eslint-disable-next-line
+    const map = L.map('map').setView([55.028522, 82.928281], 17);
+    // eslint-disable-next-line
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+    // eslint-disable-next-line
+    const pin = L.icon({
+      iconUrl: '../img/svg/pin.svg',
+      iconSize: [52, 70],
+      iconAnchor: [27, 69],
+    });
+    // eslint-disable-next-line
+    L.marker([55.028522, 82.928281], { icon: pin }).addTo(map);
+  }
+};
 
 initHeroSwiper();
 initProgramsSwiper();
 initNewsSwiper();
+initReviewsSwiper();
+initMap();
