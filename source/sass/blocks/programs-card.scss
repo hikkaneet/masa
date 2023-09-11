@@ -4,12 +4,12 @@
   min-height: 420px;
 
   @include vp-1199 {
-    width: calc(48% - 2px) !important; //Переназначает стандартные настройки swiper
+    width: calc(48% - 2px) !important; /* stylelint-disable-line */ //Переназначает стандартные настройки swiper
   }
 
   @include vp-767 {
     min-height: 398px;
-    width: 100% !important; //Переназначает стандартные настройки swiper
+    width: 100% !important; /* stylelint-disable-line */ //Переназначает стандартные настройки swiper
   }
 
   &__bg {
@@ -67,7 +67,7 @@
     line-height: 26px;
     color: $color-cerulean-blue;
     padding: 14px 18px 0;
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 12px 12px 0 0;
     background: $color-default-white;
     position: relative;
     max-width: 55%;
@@ -80,7 +80,6 @@
       background-image: url("../../img/stack.svg#angle-18");
       background-repeat: no-repeat;
       background-size: cover;
-      position: absolute;
       bottom: 0;
       right: -18px;
     }
@@ -105,7 +104,7 @@
     align-items: center;
     gap: 16px;
     padding: 12px 18px 15px 18px;
-    border-radius: 0px 12px 12px 12px;
+    border-radius: 0 12px 12px 12px;
     background: $color-default-white;
     width: 92%;
     min-height: 81px;

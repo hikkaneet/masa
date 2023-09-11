@@ -57,15 +57,15 @@
   }
 
   &__scrollbar {
-    position: static !important; //Переопределение стилей swiper
-    bottom: unset !important; //Переопределение стилей swiper
-    left: unset !important; //Переопределение стилей swiper
-    width: 100% !important; //Переопределение стилей swiper
-    height: 2px !important; //Переопределение стилей swiper
-    background-color: rgba($color-cerulean-blue, 0.6) !important; //Переопределение стилей swiper
+    position: static !important; /* stylelint-disable-line */ //Переопределение стилей swiper
+    bottom: unset !important; /* stylelint-disable-line */ //Переопределение стилей swiper
+    left: unset !important; /* stylelint-disable-line */ //Переопределение стилей swiper
+    width: 100% !important; /* stylelint-disable-line */ //Переопределение стилей swiper
+    height: 2px !important; /* stylelint-disable-line */ //Переопределение стилей swiper
+    background-color: rgba($color-cerulean-blue, 0.6) !important; /* stylelint-disable-line */ //Переопределение стилей swiper
 
     & div {
-      background-color: $color-cerulean-blue !important; //Переопределение стилей swiper
+      background-color: $color-cerulean-blue !important; /* stylelint-disable-line */ //Переопределение стилей swiper
     }
 
     @include vp-767 {

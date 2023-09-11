@@ -5,7 +5,6 @@
   width: 100%;
 
   &:hover {
-
     input,
     textarea {
       border: 1px solid $color-charcoal;
@@ -28,10 +27,6 @@
     border: 1px solid rgba($color: $color-charcoal, $alpha: 0.3);
     outline: none;
     transition: border 0.3s ease;
-
-    // &:hover {
-    //   border: 1px solid $color-charcoal;
-    // }
 
     &:active,
     &:focus {
@@ -61,7 +56,6 @@
   }
 
   &.is-invalid {
-
     input,
     textarea {
       border: 1px solid $color-wild-watermelon;
@@ -71,7 +65,6 @@
 
   &--alt {
     label {
-
       .custom-input__label,
       .custom-textarea__label {
         color: rgba($color-alabaster, 0.8);
@@ -82,6 +75,17 @@
         border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
         background-color: $color-cerulean-blue;
         color: $color-default-white;
+
+        &:active,
+        &:focus {
+          border: 1px solid $color-default-white;
+        }
+
+        &:disabled {
+          pointer-events: none;
+          border: 1px solid rgba(169, 175, 183, 0.5);
+          background: rgba(169, 175, 183, 0.2);
+        }
       }
 
       &:hover {
@@ -102,20 +106,6 @@
           color: rgba($color-alabaster, 1);
         }
       }
-    }
-  }
-
-  & input,
-  textarea {
-    &:active,
-    &:focus {
-      border: 1px solid $color-default-white;
-    }
-
-    &:disabled {
-      pointer-events: none;
-      border: 1px solid rgba(169, 175, 183, 0.5);
-      background: rgba(169, 175, 183, 0.2);
     }
   }
 

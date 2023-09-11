@@ -159,4 +159,12 @@
     opacity: 1;
     pointer-events: auto;
   }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $color-charcoal;
+    opacity: 0.8;
+  }
 }

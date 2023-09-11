@@ -1,6 +1,6 @@
 .nav-arrow {
-  margin: 0 !important; //Переопределение стилей swiper
-  position: static !important; //Переопределение стилей swiper
+  margin: 0 !important; /* stylelint-disable-line */ //Переопределение стилей swiper
+  position: static !important; /* stylelint-disable-line */ //Переопределение стилей swiper
   width: 22px;
   height: 22px;
   display: flex;

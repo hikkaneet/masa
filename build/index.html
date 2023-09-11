@@ -25,18 +25,18 @@
           </a>
           <button class="main-header__button menu-button" data-open-modal="menu">
             <span class="menu-button__text">Меню</span>
-            <div class="menu-button__icon-wrapper">
-              <div class="menu-button__icon-menu">
+            <span class="menu-button__icon-wrapper">
+              <span class="menu-button__icon-menu">
                 <svg width="20" height="10" stroke="#ffffff">
                   <use xlink:href="./img/sprite.svg#icon-menu"></use>
                 </svg>
-              </div>
-              <div class="menu-button__icon-cross">
+              </span>
+              <span class="menu-button__icon-cross">
                 <svg width="16" height="16" stroke="#ffffff">
                   <use xlink:href="./img/sprite.svg#icon-cross"></use>
                 </svg>
-              </div>
-            </div>
+              </span>
+            </span>
           </button>
         </div>
       </header>
@@ -174,11 +174,11 @@
                 <p class="about__goal-text">Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на&nbsp;ранних и&nbsp;средних стадиях карьеры, предоставляя им&nbsp;инструменты для решения сложных проблем, с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире. Цель центра&nbsp;&mdash; наделить этих людей способностью инициировать значимые изменения.</p>
                 <button class="about__button button" type="button" aria-label="Закрыть всплывающее меню." data-open-modal="feedback">
                   <span class="button__text">Подробнее о проекте</span>
-                  <div class="button__icon-wrapper">
+                  <span class="button__icon-wrapper">
                     <svg width="10" height="10" stroke="#ffffff">
                       <use xlink:href="./img/sprite.svg#icon-arrow"></use>
                     </svg>
-                  </div>
+                  </span>
                 </button>
               </div>
             </div>
@@ -872,6 +872,7 @@
         </section>
 
         <section class="feedback" id="feedback">
+          <h2 class="visually-hidden">Форма обратной связи</h2>
           <div class="feedback__container container">
             <div class="feedback__bg">
               <picture>
@@ -939,11 +940,11 @@
                 </div>
                 <button class="feedback__submit-button button button--alt" type="submit" aria-label="Отправить форму.">
                   <span class="button__text">Отправить</span>
-                  <div class="button__icon-wrapper">
+                  <span class="button__icon-wrapper">
                     <svg width="10" height="10" stroke="#ffffff">
                       <use xlink:href="./img/sprite.svg#icon-arrow"></use>
                     </svg>
-                  </div>
+                  </span>
                 </button>
               </form>
             </div>
@@ -1018,11 +1019,11 @@
         <div class="modal-menu__content">
           <button class="modal-menu__close-button menu-button menu-button--opened" data-close-modal>
             <span class="menu-button__text">Меню</span>
-            <div class="menu-button__icon-wrapper">
+            <span class="menu-button__icon-wrapper">
               <svg width="16" height="16" stroke="#ffffff">
                 <use xlink:href="./img/sprite.svg#icon-cross"></use>
               </svg>
-            </div>
+            </span>
           </button>
           <ul class="modal-menu__list">
             <li class="modal-menu__item">
@@ -1115,7 +1116,7 @@
               </label>
             </div>
             <div class="modal-feedback__select-wrapper">
-              <span class="custom-select__label">Выберите город</span>
+              <span class="modal-feedback__label">Выберите город</span>
               <div class="custom-select" data-select="" data-validate-type="select" data-name="some-name"
                 data-id="id-example-2" data-required>
                 <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span
@@ -1149,11 +1150,11 @@
             </div>
             <button class="modal-feedback__submit-button button" type="submit" aria-label="Отправить форму.">
               <span class="button__text">Отправить</span>
-              <div class="button__icon-wrapper">
+              <span class="button__icon-wrapper">
                 <svg width="10" height="10" stroke="#ffffff">
                   <use xlink:href="./img/sprite.svg#icon-arrow"></use>
                 </svg>
-              </div>
+              </span>
             </button>
           </form>
         </div>

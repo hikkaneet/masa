@@ -99,10 +99,10 @@
   }
 
   &__pagination {
-    position: static !important; //Переопределение стилей swiper
+    position: static !important; /* stylelint-disable-line */ //Переопределение стилей swiper
 
     & .swiper-pagination-bullet { //Селектор необходимый, чтобы не менять файлы самого swiper
-      margin: 0 10px !important; //Переопределение стилей swiper
+      margin: 0 10px !important; /* stylelint-disable-line */ //Переопределение стилей swiper
       width: 32px;
       height: 32px;
       text-align: center;
@@ -121,7 +121,7 @@
         width: 26px;
         height: 26px;
         font-size: 14px;
-        line-height: 26px
+        line-height: 26px;
       }
 
       &:hover,

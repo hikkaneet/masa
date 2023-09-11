@@ -23,7 +23,7 @@
         background-color: rgba($color-cerulean-blue, 0.6);
       }
 
-      input:checked+.custom-toggle__icon {
+      input:checked + .custom-toggle__icon {
         border: 1px solid $color-mischka;
 
         & svg {
@@ -94,7 +94,7 @@
         border: 1px solid rgba($color-cerulean-blue, 1);
       }
 
-      input:checked+.custom-toggle__icon {
+      input:checked + .custom-toggle__icon {
         & svg {
           stroke: $color-cerulean-blue;
         }
@@ -104,28 +104,9 @@
         }
       }
     }
-
-    // &:disabled {
-    //   .custom-toggle__icon {
-    //     border: 1px solid rgba($color-cerulean-blue, 1);
-    //     background-color: rgba($color-cerulean-blue, 0.6);
-    //   }
-
-    //   input:checked+.custom-toggle__icon {
-    //     border: 1px solid $color-mischka;
-
-    //     & svg {
-    //       stroke: $color-default-white;
-    //     }
-
-    //     &::before {
-    //       background-color: $color-mischka;
-    //     }
-    //   }
-    // }
   }
 
-  input:checked+.custom-toggle__icon {
+  input:checked + .custom-toggle__icon {
     border: 1px solid $color-cerulean-blue;
 
     & svg {
@@ -163,7 +144,7 @@
         border: 1px solid rgba($color-default-white, 1);
       }
 
-      input:checked+.custom-toggle__icon {
+      input:checked + .custom-toggle__icon {
         & svg {
           stroke: $color-default-white;
         }
@@ -174,7 +155,7 @@
       }
     }
 
-    input:checked+.custom-toggle__icon {
+    input:checked + .custom-toggle__icon {
       border: 1px solid $color-default-white;
 
       & svg {
@@ -188,8 +169,8 @@
     }
 
     input[disabled] + .custom-toggle__icon {
-        border: 1px solid rgba($color-default-white, 1);
-        background-color: rgba($color-default-white, 0.6);
+      border: 1px solid rgba($color-default-white, 1);
+      background-color: rgba($color-default-white, 0.6);
     }
 
     input[disabled][checked] + .custom-toggle__icon {

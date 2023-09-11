@@ -37,76 +37,6 @@
     }
   }
 
-  &__accordion-item {
-    border-radius: 16px;
-
-    &.is-active {
-
-      .faq__item-wrapper {
-        gap: 12px;
-        background-color: $color-cerulean-blue;
-        padding: 40px 40px 32px;
-
-        @include vp-1199 {
-          padding: 30px;
-        }
-
-        @include vp-767 {
-          padding: 20px 15px;
-        }
-
-        &:hover,
-        &:focus {
-          background-color: $color-cerulean-blue;
-
-          .faq__item-button {
-            background-color: $color-cerulean-blue;
-            border: 1px solid $color-default-white;
-
-            svg {
-              stroke: $color-default-white;
-            }
-          }
-        }
-
-        &:active {
-          background-color: $color-endeavour;
-
-          .faq__item-button {
-            background-color: $color-default-white;
-            border: 1px solid $color-default-white;
-
-            svg {
-              stroke: $color-endeavour;
-            }
-          }
-        }
-      }
-
-      .faq__item-button {
-        background-color: $color-default-white;
-        border: 1px solid $color-default-white;
-
-        svg {
-          stroke: $color-cerulean-blue;
-        }
-      }
-
-      .faq__item-title,
-      .faq__item-text {
-        color: $color-default-white;
-      }
-
-      .faq__item-button-plus {
-        display: none;
-      }
-
-      .faq__item-button-minus {
-        display: flex;
-      }
-    }
-  }
-
   &__item-wrapper {
     border-radius: 16px;
     border: 1px solid $color-cerulean-blue;
@@ -180,12 +110,11 @@
 
     @include vp-767 {
       font-size: 16px;
-      line-height: 18px
+      line-height: 18px;
     }
   }
 
   &__item-button {
-    display: inline-block;
     width: 40px;
     height: 40px;
     display: flex;
@@ -230,11 +159,62 @@
     color: $color-cerulean-blue;
 
     @include vp-1199 {
-      line-height: 20px
+      line-height: 20px;
     }
 
     @include vp-767 {
       font-size: 14px;
+    }
+  }
+}
+
+.accordion-item {
+  border-radius: 16px;
+
+  &.is-active {
+    .faq__item-wrapper {
+      gap: 12px;
+      background-color: $color-cerulean-blue;
+      padding: 40px 40px 32px;
+
+      @include vp-1199 {
+        padding: 30px;
+      }
+
+      @include vp-767 {
+        padding: 20px 15px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $color-cerulean-blue;
+      }
+
+      &:active {
+        background-color: $color-endeavour;
+      }
+    }
+
+    .faq__item-button {
+      background-color: $color-default-white;
+      border: 1px solid $color-default-white;
+
+      svg {
+        stroke: $color-cerulean-blue;
+      }
+    }
+
+    .faq__item-title,
+    .faq__item-text {
+      color: $color-default-white;
+    }
+
+    .faq__item-button-plus {
+      display: none;
+    }
+
+    .faq__item-button-minus {
+      display: flex;
     }
   }
 }

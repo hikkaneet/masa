@@ -2,14 +2,6 @@
   position: relative;
   width: 100%;
 
-  &__label {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    color: $color-charcoal;
-    opacity: 0.8;
-  }
-
   select {
     position: absolute;
 
@@ -219,17 +211,6 @@
     }
   }
 
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
-
   &--placeholder {
     .custom-select__label {
       transform: translateY(calc(-50% - 40px));
@@ -275,6 +256,12 @@
     & .custom-select__button {
       border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
       background-color: $color-cerulean-blue;
+
+      &:disabled {
+        pointer-events: none;
+        border: 1px solid rgba(169, 175, 183, 0.5);
+        background: rgba(169, 175, 183, 0.2);
+      }
     }
 
     & .custom-select__icon {
@@ -285,14 +272,6 @@
 
     .custom-select__list {
       border: 1px solid $color-default-white;
-    }
-
-    .custom-select__button {
-      &:disabled {
-        pointer-events: none;
-        border: 1px solid rgba(169, 175, 183, 0.5);
-        background: rgba(169, 175, 183, 0.2);
-      }
     }
   }
 }
