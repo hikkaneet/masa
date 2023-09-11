@@ -14,17 +14,9 @@ let modals;
 // },
 
 const openMenuCallback = () => {
-  const menuButton = document.querySelector('.menu-button');
-  if (menuButton) {
-    menuButton.classList.add('menu-button--opened');
-  }
 };
 
 const closeMenuCallback = () => {
-  const menuButton = document.querySelector('.menu-button');
-  if (menuButton) {
-    menuButton.classList.remove('menu-button--opened');
-  }
 };
 
 const settings = {

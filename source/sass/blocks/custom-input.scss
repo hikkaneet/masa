@@ -4,6 +4,14 @@
   display: flex;
   width: 100%;
 
+  &:hover {
+
+    input,
+    textarea {
+      border: 1px solid $color-charcoal;
+    }
+  }
+
   label {
     display: flex;
     flex-direction: column;
@@ -21,9 +29,9 @@
     outline: none;
     transition: border 0.3s ease;
 
-    &:hover {
-      border: 1px solid $color-charcoal;
-    }
+    // &:hover {
+    //   border: 1px solid $color-charcoal;
+    // }
 
     &:active,
     &:focus {
@@ -31,8 +39,8 @@
     }
 
     &:disabled {
-      pointer-events: none;
-      opacity: 0.3;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.2);
     }
   }
 
@@ -41,7 +49,6 @@
     font-weight: 400;
     line-height: 18px;
     color: $color-charcoal;
-    opacity: 0.8;
   }
 
   &__error {
@@ -62,60 +69,58 @@
     }
   }
 
-  // &.is-valid {
-  //   input {
-  //     border: 2px solid #22b259;
-
-  //     &:focus,
-  //     &:hover {
-  //       border: 2px solid rgba(#22b259, 0.5);
-  //     }
-  //   }
-  // }
-
-  // .input-message {
-  //   position: absolute;
-  //   right: 0;
-  //   bottom: -5px;
-
-  //   &.is-invalid {
-  //     color: #ff0000;
-  //   }
-
-  //   &.is-valid {
-  //     color: #15ab07;
-  //   }
-  // }
-
   &--alt {
-    & .custom-input__label,
-    .custom-textarea__label {
-      color: $color-alabaster;
-    }
+    label {
 
-    & input,
-    textarea {
-      border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
-      background-color: $color-cerulean-blue;
-      color: $color-default-white;
+      .custom-input__label,
+      .custom-textarea__label {
+        color: rgba($color-alabaster, 0.8);
+      }
+
+      & input,
+      textarea {
+        border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
+        background-color: $color-cerulean-blue;
+        color: $color-default-white;
+      }
 
       &:hover {
-        border: 1px solid $color-default-white;
+        .custom-input__label,
+        .custom-textarea__label {
+          color: rgba($color-alabaster, 1);
+        }
+
+        & input,
+        textarea {
+          border: 1px solid $color-default-white;
+        }
       }
 
-      &:active,
-      &:focus {
-        border: 1px solid $color-default-white;
-      }
-
-      &:disabled {
-        pointer-events: none;
-        opacity: 0.3;
+      &:focus-within {
+        .custom-input__label,
+        .custom-textarea__label {
+          color: rgba($color-alabaster, 1);
+        }
       }
     }
+  }
 
-    & textarea {
-      min-height: 98px;
+  & input,
+  textarea {
+    &:active,
+    &:focus {
+      border: 1px solid $color-default-white;
     }
+
+    &:disabled {
+      pointer-events: none;
+      border: 1px solid rgba(169, 175, 183, 0.5);
+      background: rgba(169, 175, 183, 0.2);
+    }
+  }
+
+  & textarea {
+    height: 98px;
+    padding: 10px 25px;
   }
 }

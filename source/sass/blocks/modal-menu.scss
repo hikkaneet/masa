@@ -37,11 +37,16 @@
     align-items: flex-start;
     width: 100%;
     min-height: 100%;
-    padding: 82px 100px;
+    padding: 29px 7%;
     max-width: 1440px;
     margin: 0 auto;
 
+    @include vp-1199 {
+      padding: 29px 6%;
+    }
+
     @include vp-767 {
+      padding: 0 4%;
     }
   }
 
@@ -57,26 +62,25 @@
   &__content {
     position: relative;
     min-width: 286px;
-    padding: 35px 25px;
-    background-color: $color-cerulean-blue;
-    border-radius: 16px;
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: clip-path 0.3s ease-in-out, height 0.3s linear;
 
     @include vp-767 {
       width: 100%;
-      padding: 20px;
+      padding: 20px 0;
     }
   }
 
   &__list {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 4px 0 0;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 12px;
+    padding: 27px 25px;
+    background-color: $color-cerulean-blue;
+    border-radius: 16px;
   }
 
   &__link {
@@ -101,10 +105,10 @@
   &__sub-menu {
     list-style-type: none;
     margin: 0;
-    padding: 16px 0 0 16px;
+    padding: 8px 0 0 16px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 2px;
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: clip-path 0.3s ease-in-out, height 0.3s linear;
@@ -138,6 +142,7 @@
     padding: 0;
     border: 0;
     background: 0;
+    cursor: pointer;
 
     & svg {
       transition: 0.3s linear;

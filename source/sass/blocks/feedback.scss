@@ -1,6 +1,13 @@
 .feedback {
-  padding: 120px 0 60px;
-  min-height: 983px;
+  padding: 120px 0 0;
+
+  @include vp-1199 {
+    padding: 100px 0 0;
+  }
+
+  @include vp-767 {
+    padding: 68px 0 0;
+  }
 
   &__container {
     position: relative;
@@ -40,16 +47,16 @@
     z-index: 2;
     background-color: $color-cerulean-blue;
     max-width: 40%;
-    padding: 70px 74px 50px;
+    padding: 80px 74px 50px;
     border-radius: 16px;
 
     @include vp-1199 {
-      padding: 50px 45px;
+      padding: 60px 45px 58px;
       max-width: 65%;
     }
 
     @include vp-767 {
-      adding: 50px 15px;
+      padding: 50px 15px;
       max-width: 100%;
       width: 100%;
     }
@@ -74,7 +81,7 @@
   }
 
   &__form-text {
-    margin: 20px 0 0;
+    margin: 26px 0 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -82,37 +89,110 @@
     opacity: 0.9;
 
     @include vp-1199 {
+      margin: 30px 0 0;
       line-height: 20px;
     }
 
     @include vp-767 {
+      margin: 16px 0 0;
       font-size: 14px;
     }
   }
 
   &__form {
-    margin: 30px 0 0;
+    margin: 20px 0 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
+
+    @include vp-1199 {
+      margin: 32px 0 0;
+    }
+
+    @include vp-767 {
+      margin: 26px 0 0;
+      gap: 18px;
+    }
   }
 
   &__select-wrapper {
+    margin: 4px 0 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    @include vp-1199 {
+      margin: 0;
+    }
+
+    &:hover {
+      .feedback__select-label {
+        color: rgba($color-alabaster, 1);
+      }
+
+      & button{
+        border: 1px solid $color-default-white;
+
+        & svg {
+          stroke: $color-default-white;
+        }
+      }
+    }
+
+    &:focus-within {
+      .custom-select__button{
+        color: rgba($color-alabaster, 1);
+      }
+    }
+
+    &:disabled {
+      & input,
+      textarea {
+        pointer-events: none;
+        opacity: 0.3;
+      }
+    }
   }
 
   &__submit-button {
-    margin: 20px 0 0;
+    margin: 22px 0 0;
     width: 100%;
+    gap: 28px;
+
+    & span {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+
+    @include vp-767 {
+      margin: 14px 0 0;
+      gap: 22px;
+    }
   }
 
   &__select-label {
     font-size: 14px;
     font-weight: 400;
-    line-height: 18px;
-    color: $color-alabaster;
-    opacity: 0.8;
+    line-height: 14px;
+    color: rgba($color-alabaster, 0.8);
+
+    @include vp-767 {
+      font-size: 12px;
+    }
+  }
+
+  &__custom-input {
+    & label {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    & span {
+      line-height: 14px;
+    }
+  }
+
+  &__custom-toggle {
+    margin: 4px 0 0;
   }
 }

@@ -1,8 +1,12 @@
 .faq {
-  padding: 120px 106px 0;
+  padding: 124px 0 0;
 
   @include vp-1199 {
-    padding: 120px 0 0;
+    padding: 100px 0 0;
+  }
+
+  @include vp-767 {
+    padding: 68px 0 0;
   }
 
   &__container {
@@ -16,14 +20,16 @@
 
   &__accordion-list {
     list-style-type: none;
-    margin: 60px 0 0;
-    padding: 0;
+    margin: 66px 0 0;
+    padding: 0 calc(8% + 6px);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 9px;
 
     @include vp-1199 {
       margin: 40px 0 0;
+      padding: 0;
+      gap: 8px;
     }
 
     @include vp-767 {
@@ -32,61 +38,128 @@
   }
 
   &__accordion-item {
-    padding: 40px;
     border-radius: 16px;
-    border: 1px solid $color-cerulean-blue;
 
-    &:hover,
-    :focus-within {
-      background-color: $color-default-white;
+    &.is-active {
 
-      & .faq__item-button {
+      .faq__item-wrapper {
+        gap: 12px;
+        background-color: $color-cerulean-blue;
+        padding: 40px 40px 32px;
+
+        @include vp-1199 {
+          padding: 30px;
+        }
+
+        @include vp-767 {
+          padding: 20px 15px;
+        }
+
+        &:hover,
+        &:focus {
+          background-color: $color-cerulean-blue;
+
+          .faq__item-button {
+            background-color: $color-cerulean-blue;
+            border: 1px solid $color-default-white;
+
+            svg {
+              stroke: $color-default-white;
+            }
+          }
+        }
+
+        &:active {
+          background-color: $color-endeavour;
+
+          .faq__item-button {
+            background-color: $color-default-white;
+            border: 1px solid $color-default-white;
+
+            svg {
+              stroke: $color-endeavour;
+            }
+          }
+        }
+      }
+
+      .faq__item-button {
         background-color: $color-default-white;
+        border: 1px solid $color-default-white;
 
-        & svg {
+        svg {
           stroke: $color-cerulean-blue;
         }
       }
-    }
 
-    &.is-active {
-      background-color: $color-cerulean-blue;
-
-      & .faq__item-title,
+      .faq__item-title,
       .faq__item-text {
         color: $color-default-white;
       }
 
-      & .faq__item-content {
-        margin: 30px 0 0;
-
-        @include vp-767 {
-          margin: 20px 0 0;
-        }
-      }
-
-      & .faq__item-button {
-        background-color: $color-default-white;
-
-        & svg {
-          stroke: $color-cerulean-blue;
-        }
-      }
-
-      & .faq__item-button-plus {
+      .faq__item-button-plus {
         display: none;
       }
 
-      & .faq__item-button-minus {
+      .faq__item-button-minus {
         display: flex;
       }
     }
   }
 
   &__item-wrapper {
+    border-radius: 16px;
+    border: 1px solid $color-cerulean-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 40px;
+    cursor: pointer;
+    transition: gap ease-in-out 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: $color-default-white;
+
+      .faq__item-button {
+        background-color: $color-default-white;
+        border: 1px solid $color-cerulean-blue;
+
+        svg {
+          stroke: $color-cerulean-blue;
+        }
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+      border: 1px solid $color-endeavour;
+
+      .faq__item-button {
+        background-color: $color-endeavour;
+        border: 1px solid $color-endeavour;
+
+        svg {
+          stroke: $color-default-white;
+        }
+      }
+    }
+
+    @include vp-1199 {
+      padding: 30px;
+    }
+
+    @include vp-767 {
+      padding: 20px 15px;
+    }
+  }
+
+  &__title__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     gap: 20px;
   }
 
@@ -95,13 +168,14 @@
     margin: 0;
     font-size: 28px;
     font-weight: 400;
-    line-height: 34px;
+    line-height: 28px;
     color: $color-cerulean-blue;
-    width: fit-content;
+    width: 70%;
 
     @include vp-1199 {
       font-size: 22px;
-      line-height: 26px;
+      line-height: 22px;
+      width: 100%;
     }
 
     @include vp-767 {
@@ -121,6 +195,7 @@
     border: 1px solid $color-cerulean-blue;
     border-radius: 50%;
     box-sizing: border-box;
+    flex-shrink: 0;
   }
 
   &__item-button-plus {
@@ -136,8 +211,15 @@
   }
 
   &__item-content {
-    margin: 0;
-    max-width: 62%;
+    max-width: 70%;
+
+    @include vp-1199 {
+      max-width: 90%;
+    }
+
+    @include vp-767 {
+      max-width: 100%;
+    }
   }
 
   &__item-text {

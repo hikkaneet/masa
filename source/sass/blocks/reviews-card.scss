@@ -1,15 +1,16 @@
 .reviews-card {
-  padding: 50px;
+  padding: 50px 50px 42px;
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
 
   @include vp-1199 {
     max-width: 560px;
+    padding: 50px 50px 44px;
   }
 
   @include vp-767 {
     max-width: 100%;
-    padding: 30px 15px;
+    padding: 30px 14px 24px;
   }
 
   &__profile {
@@ -29,6 +30,7 @@
     gap: 15px;
 
     @include vp-767 {
+      gap: 11px;
       flex-grow: 1;
       flex-shrink: 0;
       width: 100%;
@@ -73,7 +75,7 @@
   &__date-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 11px;
+    gap: 4px;
   }
 
   &__program,
@@ -104,7 +106,7 @@
   }
 
   &__text {
-    margin: 25px 0 0;
+    margin: 16px 0 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -114,12 +116,12 @@
     }
 
     @include vp-767 {
-      margin: 20px 0 0;
+      margin: 16px 0 0;
       font-size: 14px;
     }
 
     &--main {
-      margin: 30px 0 0;
+      margin: 24px 0 0;
       font-size: 24px;
       color: $color-cerulean-blue;
 

@@ -3,7 +3,7 @@
   padding: 4px 4px 4px 30px;
   border: 1px solid $color-cerulean-blue;
   border-radius: 30px;
-  background-color: $color-default-white;
+  background-color: $color-transparent;
   min-width: 134px;
   min-height: 54px;
   display: flex;
@@ -15,6 +15,7 @@
 
   @include vp-767 {
     padding: 4px 4px 4px 20px;
+    min-height: 40px;
     gap: 10px;
   }
 
@@ -105,6 +106,76 @@
       & svg {
         stroke: rgba($color: $color-default-white, $alpha: 0.6);
         transform: rotate(0deg);
+      }
+    }
+  }
+
+  &--alt {
+    border: 1px solid $color-default-white;
+
+    .button__text {
+      color: $color-default-white;
+    }
+
+    .button__icon-wrapper {
+      background-color: $color-default-white;
+
+      svg {
+        stroke: $color-cerulean-blue;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-default-white;
+
+      .button__text {
+        color: $color-cerulean-blue;
+      }
+
+      & .button__icon-wrapper {
+        background-color: $color-cerulean-blue;
+
+        & svg {
+          stroke: $color-default-white;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+
+      & .button__text {
+        color: rgba($color: $color-cerulean-blue, $alpha: 0.7);
+      }
+
+      & .button__icon-wrapper {
+        background-color: $color-cerulean-blue;
+
+        & svg {
+          stroke: rgba($color: $color-default-white, $alpha: 0.7);
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:disabled {
+      background-color: $color-transparent;
+      border-color: #a9afb7;
+      cursor: default;
+
+      & .button__text {
+        color: #a9afb7;
+      }
+
+      & .button__icon-wrapper {
+        background-color: #a9afb7;
+
+        & svg {
+          stroke: rgba($color: $color-default-white, $alpha: 0.6);
+          transform: rotate(0deg);
+        }
       }
     }
   }

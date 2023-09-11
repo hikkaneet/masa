@@ -1,10 +1,22 @@
 .news {
-  padding: 120px 0 0;
+  padding: 122px 0 0;
+
+  @include vp-1199 {
+    padding: 100px 0 0;
+  }
+
+  @include vp-767 {
+    padding: 68px 0 0;
+  }
 
   &__container {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @include vp-1199 {
+      gap: 30px;
+    }
   }
 
   &__title {
@@ -13,13 +25,14 @@
 
   &__tab-list {
     list-style-type: none;
-    margin: 0;
+    margin: 6px 0 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 28px;
 
     @include vp-1199 {
+      margin: 0;
       gap: 10px;
     }
 
@@ -31,7 +44,7 @@
   }
 
   &__tab-item {
-    padding: 14px 26px;
+    padding: 12px 26px 10px;
     font-size: 14px;
     font-weight: 500;
     line-height: 14px;
@@ -43,7 +56,12 @@
     box-sizing: border-box;
     cursor: pointer;
 
+    @include vp-1199 {
+      padding: 12px 19px 10px;
+    }
+
     @include vp-767 {
+      padding: 7px 13px 7px;
       font-size: 12px;
       line-height: 12px;
       letter-spacing: 0.24px;
@@ -63,19 +81,28 @@
 
   &__swiper {
     width: 100%;
+
+    @include vp-767 {
+      margin: -6px 0 0;
+    }
   }
 
   &__control-wrapper {
     min-height: 32px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    @include vp-767 {
+      margin: -10px 0 0;
+    }
   }
 
   &__pagination {
     position: static !important; //Переопределение стилей swiper
 
     & .swiper-pagination-bullet { //Селектор необходимый, чтобы не менять файлы самого swiper
-      margin: 0 10px;
+      margin: 0 10px !important; //Переопределение стилей swiper
       width: 32px;
       height: 32px;
       text-align: center;

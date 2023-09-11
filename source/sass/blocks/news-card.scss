@@ -8,7 +8,7 @@
   border-radius: 16px 16px 16px 0;
 
   @include vp-1199 {
-    min-width: 324px;
+    min-width: 314px;
     min-height: 350px;
   }
 
@@ -28,10 +28,12 @@
       width: calc(((100% - 96px) / 4) * 2 + 32px) !important;
 
       & .news-card__date {
+        padding: 12px 8px 7px 0;
         max-width: 13%;
       }
 
       & .news-card__title {
+        padding: 12px 0 0 0;
         max-width: 48%;
       }
 
@@ -44,6 +46,25 @@
   &--mobile-big {
     @include vp-767 {
       min-height: 330px;
+
+      .news-card__bg {
+        width: 100%;
+        height: 100%;
+
+        & img {
+          width: auto;
+          height: 100%;
+        }
+      }
+
+      .news-card__title {
+        padding: 9px 0 7px;
+        max-width: 70%;
+      }
+
+      .news-card__text-wrapper {
+        padding: 12px 11px 9px 0;
+      }
     }
   }
 
@@ -80,7 +101,7 @@
   }
 
   &__date {
-    padding: 12px 12px 6px 0px;
+    padding: 12px 8px 3px 0;
     font-size: 12px;
     font-weight: 400;
     line-height: 12px;
@@ -90,7 +111,7 @@
     background: $color-alabaster;
     border-radius: 0px 12px 0px 0px;
     position: relative;
-    max-width: 28%;
+    max-width: 26%;
 
     &::before {
       position: absolute;
@@ -117,6 +138,15 @@
       bottom: 0;
       right: -16px;
     }
+
+    @include vp-1199 {
+      padding: 10px 8px 3px 0;
+      max-width: 24%;
+    }
+
+    @include vp-767 {
+      max-width: 28%;
+    }
   }
 
   &__title {
@@ -125,8 +155,8 @@
     font-weight: 400;
     line-height: 26px;
     color: $color-cerulean-blue;
-    padding: 18px 18px 6px 0px;
-    border-radius: 0px 12px 0px 0px;
+    padding: 5px 0 0 0;
+    border-radius: 0 12px 0 0;
     background: $color-alabaster;
     position: relative;
     max-width: 75%;
@@ -147,11 +177,14 @@
     @include vp-1199 {
       font-size: 20px;
       line-height: 24px;
+      max-width: 64%;
     }
 
     @include vp-767 {
+      padding: 10px 0 4px;
       font-size: 16px;
       line-height: 18px;
+      max-width: 70%;
     }
   }
 
@@ -159,11 +192,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
-    padding: 12px 18px 15px 0px;
+    gap: 12px;
+    padding: 12px 18px 9px 0;
     border-radius: 0 12px 0 0;
     background: $color-alabaster;
     max-width: 84%;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../../img/stack.svg#angle-16");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      right: -16px;
+    }
+
+    @include vp-1199 {
+      max-width: 74%;
+    }
+
+    @include vp-767 {
+      padding: 6px 11px 6px 0;
+      max-width: 91%;
+    }
   }
 
   &__text {

@@ -1,18 +1,23 @@
 // Swiper 7.4.1
 import './vendor/swiper';
-import './vendor/focus-visible-polyfill';
+// import './vendor/focus-visible-polyfill';
 import './vendor/leaflet/leaflet';
 
 const initHeroSwiper = () => {
-  // const swiperElement = document.querySelectorAll('.hero__swiper');
-  // const paginationElement = document.querySelector('.hero__pagination');
+
+  const swiperContainer = document.querySelector('.hero__swiper');
+  const swiperPagination = document.querySelector('.hero__pagination');
+
+  if (!(swiperContainer && swiperPagination)) {
+    return;
+  }
 
   // eslint-disable-next-line
   const heroSwiper = new Swiper('.hero__swiper', {
     loop: true,
     slidesPerView: 1,
     pagination: {
-      el: '.hero__pagination',
+      el: swiperPagination,
       clickable: true,
     },
     speed: 0,
@@ -21,23 +26,29 @@ const initHeroSwiper = () => {
     // },
   });
 
-  heroSwiper[0].on('slideChange', (s) => {
-    // eslint-disable-next-line
-    heroSwiper[1].slideTo(s.activeIndex)
-  });
-
   heroSwiper[1].allowTouchMove = false;
+  heroSwiper[1].autoHeight = true;
 };
 
 const initProgramsSwiper = () => {
+
+  const swiperContainer = document.querySelector('.programs__swiper');
+  const swiperScrollbar = document.querySelector('.programs__scrollbar');
+  const swiperButtonNext = document.querySelector('.programs__button-next');
+  const swiperButtonPrev = document.querySelector('.programs__button-prev');
+
+  if (!(swiperContainer && swiperScrollbar && swiperButtonNext && swiperButtonPrev)) {
+    return;
+  }
+
   // eslint-disable-next-line
-  const programsSwiper = new Swiper('.programs__swiper', {
+  const programsSwiper = new Swiper(swiperContainer, {
     slidesPerView: 1,
     spaceBetween: 17,
     breakpoints: {
       768: {
-        slidesPerView: 2,
-        spaceBetween: 55,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
       },
       1200: {
         slidesPerView: 3,
@@ -45,20 +56,37 @@ const initProgramsSwiper = () => {
       },
     },
     scrollbar: {
-      el: '.programs__scrollbar',
+      el: swiperScrollbar,
       hide: false,
     },
     navigation: {
-      nextEl: '.programs__button-next',
-      prevEl: '.programs__button-prev',
+      nextEl: swiperButtonNext,
+      prevEl: swiperButtonPrev,
     },
     speed: 300,
   });
 };
 
 const initNewsSwiper = () => {
+  const swiperContainer = document.querySelector('.news__swiper');
+  const swiperPagination = document.querySelector('.news__pagination');
+  const swiperButtonNext = document.querySelector('.news__button-next');
+  const swiperButtonPrev = document.querySelector('.news__button-prev');
+  const tabItems = document.querySelectorAll('.news__tab-item');
+  const tabList = document.querySelector('.news__tab-list');
+
+  if (!(swiperContainer && swiperPagination && swiperButtonNext && swiperButtonPrev && tabItems && tabList)) {
+    return;
+  }
+
+  const swiperItems = swiperContainer.querySelectorAll('.news-card');
+
+  if (!swiperItems.length) {
+    return;
+  }
+
   // eslint-disable-next-line
-  const newsSwiper = new Swiper('.news__swiper', {
+  const newsSwiper = new Swiper(swiperContainer, {
     slidesPerView: 1,
     spaceBetween: 20,
     grid: {
@@ -84,39 +112,31 @@ const initNewsSwiper = () => {
       },
     },
     pagination: {
-      el: '.news__pagination',
+      el: swiperPagination,
       clickable: true,
       // eslint-disable-next-line
       renderBullet: function (index, className) {
-        // eslint-disable-next-line
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
       },
     },
     navigation: {
-      nextEl: '.news__button-next',
-      prevEl: '.news__button-prev',
+      nextEl: swiperButtonNext,
+      prevEl: swiperButtonPrev,
     },
     speed: 300,
   });
-
-  const tabItems = document.querySelectorAll('.news__tab-item');
-  const tabList = document.querySelector('.news__tab-list');
-
-  const newsCards = Array.from(newsSwiper.el.querySelectorAll('.news-card'));
 
   tabList.addEventListener('click', (event) => {
     if (event.target.classList.contains('news__tab-item')) {
       const selectedCategory = event.target.dataset.category;
 
-      const filteredCards = newsCards.filter((card) => {
+      const filteredCards = Array.from(swiperItems).filter((card) => {
         const cardCategory = card.dataset.category;
         return selectedCategory === 'all' || cardCategory === selectedCategory;
       });
 
       newsSwiper.removeAllSlides();
-
       newsSwiper.appendSlide(filteredCards);
-
       newsSwiper.update();
 
       tabItems.forEach((item) => {
@@ -129,8 +149,18 @@ const initNewsSwiper = () => {
 };
 
 const initReviewsSwiper = () => {
+
+  const swiperContainer = document.querySelector('.reviews__swiper');
+  const swiperScrollbar = document.querySelector('.reviews__scrollbar');
+  const swiperButtonNext = document.querySelector('.reviews__button-next');
+  const swiperButtonPrev = document.querySelector('.reviews__button-prev');
+
+  if (!(swiperContainer && swiperScrollbar && swiperButtonNext && swiperButtonPrev)) {
+    return;
+  }
+
   // eslint-disable-next-line
-  const reviewsSwiper = new Swiper('.reviews__swiper', {
+  const reviewsSwiper = new Swiper(swiperContainer, {
     slidesPerView: 1,
     spaceBetween: 10,
     breakpoints: {
@@ -144,12 +174,12 @@ const initReviewsSwiper = () => {
       },
     },
     scrollbar: {
-      el: '.reviews__scrollbar',
+      el: swiperScrollbar,
       hide: false,
     },
     navigation: {
-      nextEl: '.reviews__button-next',
-      prevEl: '.reviews__button-prev',
+      nextEl: swiperButtonNext,
+      prevEl: swiperButtonPrev,
     },
     speed: 300,
   });

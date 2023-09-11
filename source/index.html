@@ -7,6 +7,11 @@
     <meta name="description" content="Повышение квалификации молодых специалистов.">
     <title>Masa</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/Manrope-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
     <div class="page__container">
@@ -22,7 +27,7 @@
             <span class="menu-button__text">Меню</span>
             <div class="menu-button__icon-wrapper">
               <div class="menu-button__icon-menu">
-                <svg width="18" height="8" stroke="#ffffff">
+                <svg width="20" height="10" stroke="#ffffff">
                   <use xlink:href="./img/sprite.svg#icon-menu"></use>
                 </svg>
               </div>
@@ -39,7 +44,7 @@
       <main>
         <h1 class="visually-hidden">Главная страница</h1>
 
-        <section class="hero">
+        <section class="hero" id="hero">
           <h2 class="visually-hidden">Геройский блок</h2>
           <div class="hero__container">
 
@@ -157,7 +162,7 @@
           </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
           <div class="about__container container">
             <div class="about__first-wrapper">
               <div class="about__short-info">
@@ -202,11 +207,11 @@
           </div>
         </section>
 
-        <section class="programs">
+        <section class="programs" id="programs">
           <div class="programs__container container">
             <h2 class="programs__title title">Программы</h2>
             <a class="programs__button button" href="#">
-              <span class="button__text">Подробнее о проекте</span>
+              <span class="button__text">Все программы</span>
               <div class="button__icon-wrapper">
                 <svg width="10" height="10" stroke="#ffffff">
                   <use xlink:href="./img/sprite.svg#icon-arrow"></use>
@@ -341,9 +346,7 @@
           </div>
         </section>
 
-        <div style="height:60px"></div>
-
-        <section class="how-to-go">
+        <section class="how-to-go" id="how-to-go">
           <div class="how-to-go__container container">
             <div class="how-to-go__short-info">
               <h2 class="how-to-go__title title title--light">Как поехать</h2>
@@ -371,7 +374,7 @@
           </div>
         </section>
 
-        <section class="news">
+        <section class="news" id="news">
           <div class="news__container container">
             <h2 class="news__title title">Новости и&nbsp;материалы</h2>
             <ul class="news__tab-list">
@@ -461,7 +464,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="news-card news-card--mobile-big swiper-slide" data-category="career">
+                <div class="news-card swiper-slide" data-category="career">
                   <div class="news-card__bg">
                     <picture>
                       <source media="(max-width: 767px)" width="290" height="330" srcset="./img/news/img-4-tm.webp 1x, ./img/news/img-4-tm@2x.webp 2x" type="image/webp">
@@ -539,58 +542,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="news-card swiper-slide" data-category="volunteering">
-                  <div class="news-card__bg">
-                    <picture>
-                      <source media="(max-width: 767px)" width="290" height="330" srcset="./img/news/img-3-tm.webp 1x, ./img/news/img-3-tm@2x.webp 2x" type="image/webp">
-                      <source media="(max-width: 1199px)" width="324" height="350" srcset="./img/news/img-3-tm.webp 1x, ./img/news/img-3-tm@2x.webp 2x" type="image/webp">
-                      <source srcset="./img/news/img-3-d.webp 1x, ./img/news/img-3-d@2x.webp 2x" type="image/webp">
-                      <source media="(max-width: 767px)" width="290" height="330" srcset="./img/news/img-3-tm.jpg 1x, ./img/news/img-3-tm@2x.jpg 2x">
-                      <source media="(max-width: 1199px)" width="324" height="350" srcset="./img/news/img-3-tm.jpg 1x, ./img/news/img-3-tm@2x.jpg 2x">
-                      <img width="286" height="400" alt="#" src="./img/news/img-3-d.jpg" srcset="./img/news/img-3-d@2x.jpg 2x" aria-hidden="true">
-                    </picture>
-                  </div>
-                  <div class="news-card__content">
-                    <div class="news-card__content-wrapper">
-                      <span class="news-card__date">17/03/2023</span>
-                      <p class="news-card__title">Новая программа волонтёрства</p>
-                      <div class="news-card__text-wrapper">
-                        <p class="news-card__text">Программа помощи детям длительностью 4&nbsp;месяца</p>
-                        <a class="news-card__link link-icon" href="#">
-                          <svg width="10" height="10" stroke="#ffffff">
-                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="news-card swiper-slide" data-category="career">
-                  <div class="news-card__bg">
-                    <picture>
-                      <source media="(max-width: 767px)" width="290" height="330" srcset="./img/news/img-4-tm.webp 1x, ./img/news/img-4-tm@2x.webp 2x" type="image/webp">
-                      <source media="(max-width: 1199px)" width="324" height="350" srcset="./img/news/img-4-tm.webp 1x, ./img/news/img-4-tm@2x.webp 2x" type="image/webp">
-                      <source srcset="./img/news/img-4-d.webp 1x, ./img/news/img-4-d@2x.webp 2x" type="image/webp">
-                      <source media="(max-width: 767px)" width="290" height="330" srcset="./img/news/img-4-tm.jpg 1x, ./img/news/img-4-tm@2x.jpg 2x">
-                      <source media="(max-width: 1199px)" width="324" height="350" srcset="./img/news/img-4-tm.jpg 1x, ./img/news/img-4-tm@2x.jpg 2x">
-                      <img width="286" height="400" alt="#" src="./img/news/img-4-d.jpg" srcset="./img/news/img-4-d@2x.jpg 2x" aria-hidden="true">
-                    </picture>
-                  </div>
-                  <div class="news-card__content">
-                    <div class="news-card__content-wrapper">
-                      <span class="news-card__date">10/03/2023</span>
-                      <p class="news-card__title">Построй свою карьеру</p>
-                      <div class="news-card__text-wrapper">
-                        <p class="news-card__text">Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                        <a class="news-card__link link-icon" href="#">
-                          <svg width="10" height="10" stroke="#ffffff">
-                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="news__control-wrapper">
@@ -609,126 +560,136 @@
           </div>
         </section>
 
-        <section class="faq">
+        <section class="faq" id="faq">
           <div class="faq__container container">
             <h2 class="faq__title title">Вопросы и&nbsp;ответы</h2>
             <ul class="faq__accordion-list" data-accordion="parent">
               <li class="faq__accordion-item" data-accordion="element">
                 <div class="faq__item-wrapper" data-accordion="button">
-                  <h3 class="faq__item-title">Кто организатор? Какие сроки у&nbsp;программы?</h3>
-                  <button class="faq__item-button">
-                    <span class="faq__item-button-plus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-plus"></use>
-                      </svg>
-                    </span>
-                    <span class="faq__item-button-minus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-                <div class="faq__item-content" data-accordion="content">
-                  <p class="faq__item-text">Организатором программы является проект &laquo;Маса&raquo; в&nbsp;сотрудничестве
-                    с&nbsp;образовательными учреждениями. Сроки программы обмена могут варьироваться от&nbsp;одного семестра
-                    до&nbsp;года.</p>
-                </div>
-              </li>
-              <li class="faq__accordion-item" data-accordion="element">
-                <div class="faq__item-wrapper" data-accordion="button">
-                  <h3 class="faq__item-title">Что такое грант на&nbsp;обучение?</h3>
-                  <button class="faq__item-button">
-                    <span class="faq__item-button-plus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-plus"></use>
-                      </svg>
-                    </span>
-                    <span class="faq__item-button-minus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-                <div class="faq__item-content" data-accordion="content">
-                  <p class="faq__item-text">Грант на&nbsp;обучение&nbsp;&mdash; это финансовая поддержка, которую предоставляет
-                    организатор программы обмена студентами для оплаты учебных расходов.</p>
+                  <div class="faq__title__wrapper">
+                    <h3 class="faq__item-title">Кто организатор? Какие сроки у&nbsp;программы?</h3>
+                    <button class="faq__item-button">
+                      <span class="faq__item-button-plus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-plus"></use>
+                        </svg>
+                      </span>
+                      <span class="faq__item-button-minus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-minus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="faq__item-content" data-accordion="content">
+                    <p class="faq__item-text">Организатором программы является проект &laquo;Маса&raquo; в&nbsp;сотрудничестве
+                      с&nbsp;образовательными учреждениями. Сроки программы обмена могут варьироваться от&nbsp;одного семестра
+                      до&nbsp;года.</p>
+                  </div>
                 </div>
               </li>
               <li class="faq__accordion-item" data-accordion="element">
                 <div class="faq__item-wrapper" data-accordion="button">
-                  <h3 class="faq__item-title">Как определяется стоимость программы?</h3>
-                  <button class="faq__item-button">
-                    <span class="faq__item-button-plus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-plus"></use>
-                      </svg>
-                    </span>
-                    <span class="faq__item-button-minus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-                <div class="faq__item-content" data-accordion="content">
-                  <p class="faq__item-text">Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
-                    В&nbsp;большинстве случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы, и&nbsp;поэтому
-                    предусматривается определённая доля личного участия.</p>
-                </div>
-              </li>
-              <li class="faq__accordion-item" data-accordion="element">
-                <div class="faq__item-wrapper" data-accordion="button">
-                  <h3 class="faq__item-title">Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для дальнейшего обучения?</h3>
-                  <button class="faq__item-button">
-                    <span class="faq__item-button-plus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-plus"></use>
-                      </svg>
-                    </span>
-                    <span class="faq__item-button-minus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-                <div class="faq__item-content" data-accordion="content">
-                  <p class="faq__item-text">Студенты, участвующие в&nbsp;проекте, могут использовать полученные знания и&nbsp;навыки
-                    в&nbsp;своей будущей профессиональной деятельности или продолжить обучение в&nbsp;высших учебных заведениях. Кроме
-                    того, многие университеты и&nbsp;колледжи предоставляют кредиты за&nbsp;участие в&nbsp;программе обмена
-                    студентами.</p>
+                  <div class="faq__title__wrapper">
+                    <h3 class="faq__item-title">Что такое грант на&nbsp;обучение?</h3>
+                    <button class="faq__item-button">
+                      <span class="faq__item-button-plus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-plus"></use>
+                        </svg>
+                      </span>
+                      <span class="faq__item-button-minus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-minus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="faq__item-content" data-accordion="content">
+                    <p class="faq__item-text">Грант на&nbsp;обучение&nbsp;&mdash; это финансовая поддержка, которую предоставляет
+                      организатор программы обмена студентами для оплаты учебных расходов.</p>
+                  </div>
                 </div>
               </li>
               <li class="faq__accordion-item" data-accordion="element">
                 <div class="faq__item-wrapper" data-accordion="button">
-                  <h3 class="faq__item-title">Как выглядит полный процесс регистрации на&nbsp;программу &laquo;Маса&raquo;?</h3>
-                  <button class="faq__item-button">
-                    <span class="faq__item-button-plus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-plus"></use>
-                      </svg>
-                    </span>
-                    <span class="faq__item-button-minus">
-                      <svg width="18" height="18" stroke="#ffffff">
-                        <use xlink:href="./img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </span>
-                  </button>
+                  <div class="faq__title__wrapper">
+                    <h3 class="faq__item-title">Как определяется стоимость программы?</h3>
+                    <button class="faq__item-button">
+                      <span class="faq__item-button-plus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-plus"></use>
+                        </svg>
+                      </span>
+                      <span class="faq__item-button-minus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-minus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="faq__item-content" data-accordion="content">
+                    <p class="faq__item-text">Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
+                      В&nbsp;большинстве случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы, и&nbsp;поэтому
+                      предусматривается определённая доля личного участия.</p>
+                  </div>
                 </div>
-                <div class="faq__item-content" data-accordion="content">
-                  <p class="faq__item-text">Процесс регистрации на программу обмена включает выбор университета-партнера и программы
-                    обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов,
-                    прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание
-                    договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
+              </li>
+              <li class="faq__accordion-item" data-accordion="element">
+                <div class="faq__item-wrapper" data-accordion="button">
+                  <div class="faq__title__wrapper">
+                    <h3 class="faq__item-title">Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для дальнейшего обучения?</h3>
+                    <button class="faq__item-button">
+                      <span class="faq__item-button-plus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-plus"></use>
+                        </svg>
+                      </span>
+                      <span class="faq__item-button-minus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-minus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="faq__item-content" data-accordion="content">
+                    <p class="faq__item-text">Студенты, участвующие в&nbsp;проекте, могут использовать полученные знания и&nbsp;навыки
+                      в&nbsp;своей будущей профессиональной деятельности или продолжить обучение в&nbsp;высших учебных заведениях. Кроме
+                      того, многие университеты и&nbsp;колледжи предоставляют кредиты за&nbsp;участие в&nbsp;программе обмена
+                      студентами.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="faq__accordion-item" data-accordion="element">
+                <div class="faq__item-wrapper" data-accordion="button">
+                  <div class="faq__title__wrapper">
+                    <h3 class="faq__item-title">Как выглядит полный процесс регистрации на&nbsp;программу &laquo;Маса&raquo;?</h3>
+                    <button class="faq__item-button">
+                      <span class="faq__item-button-plus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-plus"></use>
+                        </svg>
+                      </span>
+                      <span class="faq__item-button-minus">
+                        <svg width="18" height="18" stroke="#ffffff">
+                          <use xlink:href="./img/sprite.svg#icon-minus"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="faq__item-content" data-accordion="content">
+                    <p class="faq__item-text">Процесс регистрации на программу обмена включает выбор университета-партнера и программы
+                      обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов,
+                      прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание
+                      договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
         </section>
 
-        <section class="reviews">
+        <section class="reviews" id="reviews">
           <div class="reviews__container container">
             <h2 class="reviews__title title">Отзывы</h2>
             <div class="reviews__swiper swiper">
@@ -878,9 +839,7 @@
           </div>
         </section>
 
-        <div style="height:60px"></div>
-
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="contacts__container container">
             <div class="contacts__main-wrapper">
               <h2 class="contacts__title title">Контакты</h2>
@@ -901,18 +860,18 @@
             </div>
             <div class="contacts__map-wrapper" id="map">
               <picture>
-                <source media="(max-width: 767px)" width="290" height="240" srcset="./img/map/map-m.webp 1x, ./img/map/map-m@2x.webp 2x" type="image/webp">
-                <source media="(max-width: 1199px)" width="678" height="500" srcset="./img/map/map-t.webp 1x, ./img/map/map-t@2x.webp 2x" type="image/webp">
-                <source srcset="./img/map/map-d.webp 1x, ./img/map/map-d@2x.webp 2x" type="image/webp">
-                <source media="(max-width: 767px)" width="290" height="240" srcset="./img/map/map-m.jpg 1x, ./img/map/map-m@2x.jpg 2x">
-                <source media="(max-width: 1199px)" width="678" height="500" srcset="./img/map/map-t.jpg 1x, ./img/map/map-t@2x.jpg 2x">
-                <img width="1240" height="500" alt="#" src="./img/map/map-d.jpg" srcset="./img/map/map-d@2x.jpg 2x" aria-hidden="true">
+                <source media="(max-width: 767px)" width="290" height="240" srcset="./img/contacts/map-m.webp 1x, ./img/contacts/map-m@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 1199px)" width="678" height="500" srcset="./img/contacts/map-t.webp 1x, ./img/contacts/map-t@2x.webp 2x" type="image/webp">
+                <source srcset="./img/contacts/map-d.webp 1x, ./img/contacts/map-d@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 767px)" width="290" height="240" srcset="./img/contacts/map-m.jpg 1x, ./img/contacts/map-m@2x.jpg 2x">
+                <source media="(max-width: 1199px)" width="678" height="500" srcset="./img/contacts/map-t.jpg 1x, ./img/contacts/map-t@2x.jpg 2x">
+                <img width="1240" height="500" alt="#" src="./img/contacts/map-d.jpg" srcset="./img/contacts/map-d@2x.jpg 2x" aria-hidden="true">
               </picture>
             </div>
           </div>
         </section>
 
-        <section class="feedback">
+        <section class="feedback" id="feedback">
           <div class="feedback__container container">
             <div class="feedback__bg">
               <picture>
@@ -922,12 +881,12 @@
                 <img width="1240" height="803" alt="#" src="./img/feedback/img-d.jpg" srcset="./img/feedback/img-d@2x.jpg 2x" aria-hidden="true">
               </picture>
             </div>
-            <div class="feedback__form-wrapper">
+            <div class="feedback__form-wrapper" data-form-validate>
               <p class="feedback__form-title">Напишите нам</p>
-          <p class="feedback__form-text">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash;
+              <p class="feedback__form-text">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash;
             мы&nbsp;на&nbsp;них ответим!</p>
               <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
-                <div class="custom-input custom-input--alt" data-validate-type="text" data-limitation="name" data-required>
+                <div class="feedback__custom-input custom-input custom-input--alt" data-validate-type="text" data-limitation="name" data-required>
                   <label>
                     <span class="custom-input__label">Имя</span>
                     <input type="text" name="customer-name" required maxlength="64" autocomplete="off">
@@ -935,11 +894,11 @@
                 </div>
                 <div class="custom-input custom-input--alt" data-validate-type="phone" data-required>
                   <label>
-                    <span class="custom-input__label">Телефон</span>
+                    <span class="feedback__custom-input custom-input__label">Телефон</span>
                     <input type="tel" name="customer-phone" required maxlength="32" autocomplete="off">
                   </label>
                 </div>
-                <div class="custom-textarea custom-textarea--alt" data-validate-type="text">
+                <div class="feedback__custom-input custom-textarea custom-textarea--alt" data-validate-type="text" data-required>
                   <label>
                     <span class="custom-textarea__label">Ваше сообщение</span>
                     <textarea name="user-text" class=""></textarea>
@@ -948,7 +907,7 @@
                 <div class="feedback__select-wrapper">
                   <span class="feedback__select-label">Выберите город</span>
                   <div class="custom-select custom-select--alt" data-select="" data-validate-type="select" data-name="some-name"
-                    data-id="id-example-2" data-message-base="Поле обязательно к заполнению">
+                    data-id="id-example-2" data-required>
                     <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span
                         class="custom-select__text"></span><span class="custom-select__icon">
                         <svg width="14" height="6" stroke="#484848">
@@ -962,10 +921,12 @@
                         Санкт-Петербург</li>
                       <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
                         Краснодар</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+                        Ростов</li>
                     </ul>
                   </div>
                 </div>
-                <div class="custom-toggle custom-toggle--alt custom-toggle--checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
+                <div class="feedback__custom-toggle custom-toggle custom-toggle--alt custom-toggle--checkbox" data-validate-type="checkbox">
                   <label>
                     <input type="checkbox" value="user-agreement-1" name="user-agreement">
                     <span class="custom-toggle__icon">
@@ -976,7 +937,7 @@
                     <span class="custom-toggle__label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
                   </label>
                 </div>
-                <button class="feedback__submit-button button" type="submit" aria-label="Отправить форму.">
+                <button class="feedback__submit-button button button--alt" type="submit" aria-label="Отправить форму.">
                   <span class="button__text">Отправить</span>
                   <div class="button__icon-wrapper">
                     <svg width="10" height="10" stroke="#ffffff">
@@ -988,8 +949,6 @@
             </div>
           </div>
         </section>
-
-        <div style="height:60px"></div>
 
       </main>
 
@@ -1003,22 +962,22 @@
             </a>
             <ul class="main-footer__menu-list">
               <li class="main-footer__menu-item">
-                <a class="main-footer__menu-link" href="#">О проекте</a>
+                <a class="main-footer__menu-link" href="#about">О проекте</a>
               </li>
               <li class="main-footer__menu-item">
-                <a class="main-footer__menu-link" href="#">Программы</a>
+                <a class="main-footer__menu-link" href="#programs">Программы</a>
               </li>
               <li class="main-footer__menu-item">
-                <a class="main-footer__menu-link" href="#">Как поехать</a>
+                <a class="main-footer__menu-link" href="#how-to-go">Как поехать</a>
               </li>
               <li class="main-footer__menu-item">
-                <a class="main-footer__menu-link" href="#">Отзывы</a>
+                <a class="main-footer__menu-link" href="#reviews">Отзывы</a>
               </li>
               <li class="main-footer__menu-item">
-                <a class="main-footer__menu-link" href="#">Новости</a>
+                <a class="main-footer__menu-link" href="#news">Новости</a>
               </li>
               <li class="main-footer__menu-item">
-                <a class="main-footer__menu-link" href="#">Контакты</a>
+                <a class="main-footer__menu-link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -1057,12 +1016,20 @@
       <div class="modal-menu__wrapper">
         <div class="modal-menu__overlay" data-close-modal></div>
         <div class="modal-menu__content">
+          <button class="modal-menu__close-button menu-button menu-button--opened" data-close-modal>
+            <span class="menu-button__text">Меню</span>
+            <div class="menu-button__icon-wrapper">
+              <svg width="16" height="16" stroke="#ffffff">
+                <use xlink:href="./img/sprite.svg#icon-cross"></use>
+              </svg>
+            </div>
+          </button>
           <ul class="modal-menu__list">
             <li class="modal-menu__item">
-              <a class="modal-menu__link" href="#">О проекте</a>
+              <a class="modal-menu__link" href="#about" data-close-modal>О проекте</a>
             </li>
             <li class="modal-menu__item modal-menu__item--sub-menu">
-              <a class="modal-menu__link" href="#">Программы</a>
+              <a class="modal-menu__link" href="#programs" data-close-modal>Программы</a>
               <button class="modal-menu__sub-button modal-menu__sub-button">
                 <svg width="12" height="12" stroke="#ffffff">
                   <use xlink:href="./img/sprite.svg#icon-arrow-down"></use>
@@ -1070,27 +1037,27 @@
               </button>
               <ul class="modal-menu__sub-menu modal-menu__sub-menu--closed">
                 <li class="modal-menu__sub-item">
-                  <a class="modal-menu__sub-link" href="#">Стажировки</a>
+                  <a class="modal-menu__sub-link" href="#" data-close-modal>Стажировки</a>
                 </li>
                 <li class="modal-menu__sub-item">
-                  <a class="modal-menu__sub-link" href="#">Волонтёрство</a>
+                  <a class="modal-menu__sub-link" href="#" data-close-modal>Волонтёрство</a>
                 </li>
                 <li class="modal-menu__sub-item">
-                  <a class="modal-menu__sub-link" href="#">Учёба</a>
+                  <a class="modal-menu__sub-link" href="#" data-close-modal>Учёба</a>
                 </li>
                 <li class="modal-menu__sub-item">
-                  <a class="modal-menu__sub-link" href="#">Религия</a>
+                  <a class="modal-menu__sub-link" href="#" data-close-modal>Религия</a>
                 </li>
               </ul>
             </li>
             <li class="modal-menu__item">
-              <a class="modal-menu__link" href="#">Как поехать</a>
+              <a class="modal-menu__link" href="#how-to-go" data-close-modal>Как поехать</a>
             </li>
             <li class="modal-menu__item">
-              <a class="modal-menu__link" href="#">Отзывы</a>
+              <a class="modal-menu__link" href="#reviews" data-close-modal>Отзывы</a>
             </li>
             <li class="modal-menu__item modal-menu__item--sub-menu">
-              <a class="modal-menu__link" href="#">Новости</a>
+              <a class="modal-menu__link" href="#news" data-close-modal>Новости</a>
               <button class="modal-menu__sub-button">
                 <svg width="12" height="12" stroke="#ffffff">
                   <use xlink:href="./img/sprite.svg#icon-arrow-down"></use>
@@ -1098,24 +1065,24 @@
               </button>
               <ul class="modal-menu__sub-menu modal-menu__sub-menu--closed">
                 <li class="modal-menu__sub-item">
-                  <a class="modal-menu__sub-link" href="#">Общее</a>
+                  <a class="modal-menu__sub-link" href="#" data-close-modal>Общее</a>
                 </li>
                 <li class="modal-menu__sub-item">
-                  <a class="modal-menu__sub-link" href="#">Волонтёрство</a>
+                  <a class="modal-menu__sub-link" href="#" data-close-modal>Волонтёрство</a>
                 </li>
                 <li class="modal-menu__sub-item">
-                  <a class="modal-menu__sub-link" href="#">Стажировки</a>
+                  <a class="modal-menu__sub-link" href="#" data-close-modal>Стажировки</a>
                 </li>
                 <li class="modal-menu__sub-item">
-                  <a class="modal-menu__sub-link" href="#">Карьера</a>
+                  <a class="modal-menu__sub-link" href="#" data-close-modal>Карьера</a>
                 </li>
                 <li class="modal-menu__sub-item">
-                  <a class="modal-menu__sub-link" href="#">Путешествия</a>
+                  <a class="modal-menu__sub-link" href="#" data-close-modal>Путешествия</a>
                 </li>
               </ul>
             </li>
             <li class="modal-menu__item">
-              <a class="modal-menu__link" href="#">Контакты</a>
+              <a class="modal-menu__link" href="#contacts" data-close-modal>Контакты</a>
             </li>
           </ul>
         </div>
@@ -1150,7 +1117,7 @@
             <div class="modal-feedback__select-wrapper">
               <span class="custom-select__label">Выберите город</span>
               <div class="custom-select" data-select="" data-validate-type="select" data-name="some-name"
-                data-id="id-example-2" data-message-base="Поле обязательно к заполнению">
+                data-id="id-example-2" data-required>
                 <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span
                     class="custom-select__text"></span><span class="custom-select__icon">
                     <svg width="14" height="6" stroke="#484848">
@@ -1164,6 +1131,8 @@
                     Санкт-Петербург</li>
                   <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
                     Краснодар</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+                    Ростов</li>
                 </ul>
               </div>
             </div>
