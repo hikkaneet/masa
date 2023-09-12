@@ -4,18 +4,35 @@
   display: flex;
   width: 100%;
 
-  &:hover {
-    input,
-    textarea {
-      border: 1px solid $color-charcoal;
-    }
-  }
-
   label {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 12px;
+
+    &:hover {
+      input,
+      textarea {
+        border: 1px solid $color-charcoal;
+      }
+  
+      & .custom-input__label {
+        color: rgba($color-charcoal, 1)
+      }
+    }
+  
+    &:focus-within {
+      .custom-input__label,
+      .custom-textarea__label {
+        color: rgba($color-charcoal, 1)
+      }
+    }
+  
+    &:disabled {
+      pointer-events: none;
+      border: 1px solid rgba(169, 175, 183, 0.5);
+      background: rgba(169, 175, 183, 0.2);
+    }
   }
 
   input,
@@ -43,7 +60,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
-    color: $color-charcoal;
+    color: rgba($color-charcoal, 0.8)
   }
 
   &__error {

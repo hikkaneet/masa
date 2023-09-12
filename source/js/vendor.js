@@ -1,6 +1,4 @@
-// Swiper 7.4.1
 import './vendor/swiper';
-// import './vendor/focus-visible-polyfill';
 import './vendor/leaflet/leaflet';
 
 const initHeroSwiper = () => {
@@ -21,9 +19,9 @@ const initHeroSwiper = () => {
       clickable: true,
     },
     speed: 0,
-    // autoplay: {
-    //   delay: 3000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
   });
 
   heroSwiper[1].allowTouchMove = false;

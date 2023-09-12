@@ -3796,16 +3796,16 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   min-height: 100%;
   padding: 60px 40px;
 }
 @media (max-width: 767px) {
   .modal-feedback__wrapper {
-    padding: 60px 16px;
+    padding: 60px 5%;
   }
 }
 .modal-feedback__overlay {
@@ -3821,7 +3821,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 60px 80px;
+  padding: 54px 80px 60px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3836,8 +3836,7 @@ button,
 @media (max-width: 767px) {
   .modal-feedback__content {
     width: 100%;
-    padding: 40px 15px;
-    gap: 25px;
+    padding: 40px calc(4% + 1px);
   }
 }
 .modal-feedback__close {
@@ -3888,7 +3887,7 @@ button,
   }
 }
 .modal-feedback__text {
-  margin: 20px 0 0;
+  margin: 6px 0 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -3896,19 +3895,21 @@ button,
 }
 @media (max-width: 1199px) {
   .modal-feedback__text {
+    margin: 14px 0 0;
     font-size: 16px;
     line-height: 20px;
   }
 }
 @media (max-width: 767px) {
   .modal-feedback__text {
-    margin: 15px 0 0;
+    margin: 5px 0 0;
+    padding: 0px 10%;
     font-size: 14px;
     line-height: 20px;
   }
 }
 .modal-feedback__form {
-  margin: 30px 0 0;
+  margin: 18px 0 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3917,7 +3918,22 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 14px;
+}
+@media (max-width: 1199px) {
+  .modal-feedback__form {
+    margin: 20px 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .modal-feedback__form {
+    gap: 0;
+  }
+}
+@media (max-width: 767px) {
+  .modal-feedback__form .custom-toggle {
+    margin: 6px 0 0;
+  }
 }
 .modal-feedback__select-wrapper, .modal-feedback__toggle-wrapper {
   display: -webkit-box;
@@ -3930,10 +3946,22 @@ button,
   gap: 12px;
 }
 .modal-feedback__submit-button {
-  margin: 10px auto 0;
+  margin: 15px auto 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media (max-width: 767px) {
+  .modal-feedback__submit-button {
+    margin: 27px 0 0;
+    width: 100%;
+    gap: 20%;
+  }
+  .modal-feedback__submit-button .button__text {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 .modal-feedback--preload {
   -webkit-transition: none;
@@ -3963,12 +3991,6 @@ button,
   display: flex;
   width: 100%;
 }
-.custom-input:hover input,
-.custom-input:hover textarea,
-.custom-textarea:hover input,
-.custom-textarea:hover textarea {
-  border: 1px solid #484848;
-}
 .custom-input label,
 .custom-textarea label {
   display: -webkit-box;
@@ -3980,6 +4002,28 @@ button,
           flex-direction: column;
   width: 100%;
   gap: 12px;
+}
+.custom-input label:hover input,
+.custom-input label:hover textarea,
+.custom-textarea label:hover input,
+.custom-textarea label:hover textarea {
+  border: 1px solid #484848;
+}
+.custom-input label:hover .custom-input__label,
+.custom-textarea label:hover .custom-input__label {
+  color: #484848;
+}
+.custom-input label:focus-within .custom-input__label,
+.custom-input label:focus-within .custom-textarea__label,
+.custom-textarea label:focus-within .custom-input__label,
+.custom-textarea label:focus-within .custom-textarea__label {
+  color: #484848;
+}
+.custom-input label:disabled,
+.custom-textarea label:disabled {
+  pointer-events: none;
+  border: 1px solid rgba(169, 175, 183, 0.5);
+  background: rgba(169, 175, 183, 0.2);
 }
 .custom-input input,
 .custom-input textarea,
@@ -4017,7 +4061,7 @@ button,
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  color: #484848;
+  color: rgba(72, 72, 72, 0.8);
 }
 .custom-input__error,
 .custom-textarea__error {
@@ -4243,16 +4287,6 @@ button,
 .custom-select {
   position: relative;
   width: 100%;
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
 }
 .custom-select select {
   position: absolute;
@@ -5639,75 +5673,6 @@ button,
   }
 }
 
-/* .faq__accordion-item {
-  border-radius: 16px;
-
-  &.is-active {
-    .faq__item-wrapper {
-      gap: 12px;
-      background-color: $color-cerulean-blue;
-      padding: 40px 40px 32px;
-
-      @include vp-1199 {
-        padding: 30px;
-      }
-
-      @include vp-767 {
-        padding: 20px 15px;
-      }
-
-      &:hover,
-      &:focus {
-        background-color: $color-cerulean-blue;
-
-        .faq__item-button {
-          background-color: $color-cerulean-blue;
-          border: 1px solid $color-default-white;
-
-          svg {
-            stroke: $color-default-white;
-          }
-        }
-      }
-
-      &:active {
-        background-color: $color-endeavour;
-
-        .faq__item-button {
-          background-color: $color-default-white;
-          border: 1px solid $color-default-white;
-
-          svg {
-            stroke: $color-endeavour;
-          }
-        }
-      }
-    }
-
-    .faq__item-button {
-      background-color: $color-default-white;
-      border: 1px solid $color-default-white;
-
-      svg {
-        stroke: $color-cerulean-blue;
-      }
-    }
-
-    .faq__item-title,
-    .faq__item-text {
-      color: $color-default-white;
-    }
-
-    .faq__item-button-plus {
-      display: none;
-    }
-
-    .faq__item-button-minus {
-      display: flex;
-    }
-  }
-}
- */
 .accordion-item {
   border-radius: 16px;
 }
@@ -6337,13 +6302,6 @@ button,
   margin: 22px 0 0;
   width: 100%;
   gap: 28px;
-}
-.feedback__submit-button span {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 @media (max-width: 767px) {
   .feedback__submit-button {

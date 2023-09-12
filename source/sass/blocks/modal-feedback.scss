@@ -34,13 +34,14 @@
     display: flex;
     flex-shrink: 0;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
+    align-items: flex-start;
     width: 100%;
     min-height: 100%;
     padding: 60px 40px;
 
     @include vp-767 {
-      padding: 60px 16px;
+      padding: 60px 5%;
     }
   }
 
@@ -56,7 +57,7 @@
   &__content {
     position: relative;
     display: flex;
-    padding: 60px 80px;
+    padding: 54px 80px 60px;
     flex-direction: column;
     align-items: center;
     border-radius: 16px;
@@ -65,8 +66,7 @@
 
     @include vp-767 {
       width: 100%;
-      padding: 40px 15px;
-      gap: 25px;
+      padding: 40px calc(4% + 1px);
     }
   }
 
@@ -111,30 +111,46 @@
   }
 
   &__text {
-    margin: 20px 0 0;
+    margin: 6px 0 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
     text-align: center;
 
     @include vp-1199 {
+      margin: 14px 0 0;
       font-size: 16px;
       line-height: 20px;
     }
 
     @include vp-767 {
-      margin: 15px 0 0;
+      margin: 5px 0 0;
+      padding: 0px 10%;
       font-size: 14px;
       line-height: 20px;
     }
   }
 
   &__form {
-    margin: 30px 0 0;
+    margin: 18px 0 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
+
+    @include vp-1199 {
+      margin: 20px 0 0;
+    }
+
+    @include vp-767 {
+      gap: 0;
+    }
+
+    & .custom-toggle {
+      @include vp-767 {
+        margin: 6px 0 0;
+      }
+    }
   }
 
   &__select-wrapper,
@@ -145,8 +161,18 @@
   }
 
   &__submit-button {
-    margin: 10px auto 0;
+    margin: 15px auto 0;
     width: fit-content;
+
+    @include vp-767 {
+      margin: 27px 0 0;
+      width: 100%;
+      gap: 20%;
+
+      & .button__text {
+        flex-grow: 1;
+      }
+    }
   }
 
   &--preload {
