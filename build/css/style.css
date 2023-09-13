@@ -3913,7 +3913,7 @@ button,
 @media (max-width: 767px) {
   .modal-feedback__text {
     margin: 5px 0 0;
-    padding: 0px 10%;
+    padding: 0 10%;
     font-size: 14px;
     line-height: 20px;
   }

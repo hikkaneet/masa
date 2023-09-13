@@ -205,12 +205,12 @@
       .custom-toggle__icon {
         border: 1px solid rgba($color-default-white, 1);
       }
-  
+
       input:checked + .custom-toggle__icon {
         & svg {
-          stroke: $color-default-white;;
+          stroke: $color-default-white;
         }
-  
+
         &::before {
           background-color: $color-cerulean-blue;
         }
