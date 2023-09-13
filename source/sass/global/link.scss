@@ -14,6 +14,8 @@
     bottom: 0;
   }
 
+  @include fv-off;
+  
   &:hover,
   &:focus {
     &::after {

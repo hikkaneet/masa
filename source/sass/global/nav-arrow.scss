@@ -13,6 +13,8 @@
     stroke: $color-cerulean-blue;
   }
 
+  @include fv-off;
+
   &::after {
     display: none;
   }

@@ -19,13 +19,32 @@ const initHeroSwiper = () => {
       clickable: true,
     },
     speed: 0,
+    autoHeight: true,
     autoplay: {
       delay: 3000,
     },
+    /* eslint-disable */
+    on: {
+      init: function () {
+        updateFocus(this.realIndex + 1);
+      },
+      slideChange: function () {
+        updateFocus(this.realIndex + 1);
+      },
+    },
+    /* eslint-enable */
   });
 
   heroSwiper[1].allowTouchMove = false;
   heroSwiper[1].autoHeight = true;
+  heroSwiper[0].on('slideChange', (s) => {
+    // eslint-disable-next-line
+    heroSwiper[1].slideTo(s.activeIndex)
+  });
+  heroSwiper[1].on('slideChange', (s) => {
+    // eslint-disable-next-line
+    heroSwiper[0].slideTo(s.activeIndex)
+  });
 };
 
 const initProgramsSwiper = () => {
@@ -52,6 +71,10 @@ const initProgramsSwiper = () => {
         slidesPerView: 3,
         spaceBetween: 35,
       },
+      1441: {
+        slidesPerView: 'auto',
+        spaceBetween: 35,
+      },
     },
     scrollbar: {
       el: swiperScrollbar,
@@ -64,6 +87,21 @@ const initProgramsSwiper = () => {
     speed: 300,
   });
 };
+
+function updateFocus(index) {
+  const slides = document.querySelectorAll('.hero__slide');
+
+  slides.forEach((slide, i) => {
+    const elementsToFocus = slide.querySelectorAll('a, button');
+    elementsToFocus.forEach((element) => {
+      if (i === index) {
+        element.removeAttribute('tabindex');
+      } else {
+        element.setAttribute('tabindex', '-1');
+      }
+    });
+  });
+}
 
 const initNewsSwiper = () => {
   const swiperContainer = document.querySelector('.news__swiper');
@@ -106,6 +144,10 @@ const initNewsSwiper = () => {
         grid: {
           fill: 'row',
           rows: 1,
+        },
+        1441: {
+          slidesPerView: 'auto',
+          spaceBetween: 32,
         },
       },
     },
@@ -168,6 +210,10 @@ const initReviewsSwiper = () => {
       },
       1200: {
         slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      1441: {
+        slidesPerView: 'auto',
         spaceBetween: 32,
       },
     },

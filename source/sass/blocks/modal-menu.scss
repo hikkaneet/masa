@@ -92,6 +92,8 @@
     color: rgba($color: $color-default-white, $alpha: 0.7);
     transition: 0.3s linear;
 
+    @include fv-off;
+
     &--current {
       color: $color-default-white;
     }
@@ -127,6 +129,8 @@
     transition: 0.3s linear;
     color: rgba($color: $color-default-white, $alpha: 0.6);
 
+    @include fv-off;
+
     &--current {
       color: rgba($color: $color-default-white, $alpha: 0.9);
     }
@@ -145,8 +149,11 @@
     cursor: pointer;
 
     & svg {
+      stroke: rgba($color-default-white, 0.6);
       transition: 0.3s linear;
     }
+
+    @include fv-off;
 
     &--rotated {
       transform: rotate(180deg);
@@ -155,7 +162,7 @@
     &:hover,
     &:focus {
       & svg {
-        stroke: $color-default-white;
+        stroke: rgba($color-default-white, 1);
       }
     }
   }

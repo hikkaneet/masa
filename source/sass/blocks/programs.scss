@@ -52,6 +52,20 @@
     flex-grow: 1;
     flex-shrink: 0;
     width: 100%;
+
+    @include vp-1199 {
+      margin: 4px calc(-6% - 6px) 0 0;
+    }
+
+    @include vp-767 {
+      margin: 4px 0 0;
+    }
+
+    @media (min-width: 1441px) {
+      width: 90vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__control-wrapper {
@@ -95,5 +109,9 @@
     display: flex;
     gap: 10px;
     min-height: 22px;
+
+    & div {
+      @include fv-off;
+    }
   }
 }

@@ -80,6 +80,12 @@
 //   }
 // }
 
+@mixin fv-off {
+  &:focus-visible {
+    outline: 0;
+  }
+}
+
 // Mobile first
 
 // @mixin vp-375 {

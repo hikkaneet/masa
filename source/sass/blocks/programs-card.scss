@@ -4,12 +4,17 @@
   min-height: 420px;
 
   @include vp-1199 {
+    max-width: 324px;
     width: calc(48% - 2px) !important; /* stylelint-disable-line */ //Переназначает стандартные настройки swiper
   }
 
   @include vp-767 {
     min-height: 398px;
     width: 100% !important; /* stylelint-disable-line */ //Переназначает стандартные настройки swiper
+  }
+
+  @media (min-width: 1441px) {
+    max-width: 392px;
   }
 
   &__bg {

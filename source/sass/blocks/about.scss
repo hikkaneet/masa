@@ -170,6 +170,7 @@
     border: 1px solid $color-alabaster;
     box-sizing: border-box;
     position: relative;
+    height: fit-content;
 
     &::before {
       position: absolute;

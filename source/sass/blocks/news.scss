@@ -29,6 +29,7 @@
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 28px;
 
     @include vp-1199 {
@@ -39,6 +40,7 @@
     @include vp-767 {
       justify-content: flex-start;
       gap: 12px;
+      flex-wrap: nowrap;
       overflow: auto;
     }
   }
@@ -85,6 +87,12 @@
     @include vp-767 {
       margin: -6px 0 0;
     }
+
+    @media (min-width: 1441px) {
+      width: 90vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__control-wrapper {
@@ -124,8 +132,10 @@
         line-height: 26px;
       }
 
+      @include fv-off;
+
       &:hover,
-      :focus {
+      &:focus {
         color: $color-cerulean-blue;
         background-color: $color-transparent;
         border: 1px solid $color-cerulean-blue;

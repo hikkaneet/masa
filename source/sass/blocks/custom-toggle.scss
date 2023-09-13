@@ -129,6 +129,22 @@
     display: none;
   }
 
+  &:focus-within {
+    .custom-toggle__icon {
+      border: 1px solid rgba($color-cerulean-blue, 1);
+    }
+
+    input:checked + .custom-toggle__icon {
+      & svg {
+        stroke: $color-cerulean-blue;
+      }
+
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
   &--alt {
     .custom-toggle__label {
       color: $color-alabaster;
@@ -182,6 +198,22 @@
 
       &::before {
         background-color: $color-mischka;
+      }
+    }
+
+    &:focus-within {
+      .custom-toggle__icon {
+        border: 1px solid rgba($color-default-white, 1);
+      }
+  
+      input:checked + .custom-toggle__icon {
+        & svg {
+          stroke: $color-default-white;;
+        }
+  
+        &::before {
+          background-color: $color-cerulean-blue;
+        }
       }
     }
   }

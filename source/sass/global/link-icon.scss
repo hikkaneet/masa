@@ -13,8 +13,10 @@
     transform: rotate(0deg);
   }
 
+  @include fv-off;
+
   &:hover,
-  :focus {
+  &:focus {
     background-color: $color-default-white;
 
     & svg {

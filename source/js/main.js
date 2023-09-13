@@ -8,17 +8,23 @@ import {initAccordions} from './modules/accordion/init-accordion';
 
 const toggleSubmenu = () => {
   const modalMenu = document.querySelector('.modal-menu');
+  const subButtons = modalMenu.querySelectorAll('.modal-menu__sub-button');
 
-  if (!modalMenu) {
+  if (!modalMenu && !subButtons) {
     return;
   }
-
-  const subButtons = modalMenu.querySelectorAll('.modal-menu__sub-button');
 
   subButtons.forEach((subButton) => {
     subButton.addEventListener('click', () => {
       const subMenu = subButton.nextElementSibling;
       subMenu.classList.toggle('modal-menu__sub-menu--closed');
+      subButton.classList.toggle('modal-menu__sub-button--rotated');
+
+      const subLinks = subMenu.querySelectorAll('.modal-menu__sub-link');
+
+      subLinks.forEach((subLink) => {
+        subLink.tabIndex = subMenu.classList.contains('modal-menu__sub-menu--closed') ? -1 : 1;
+      });
     });
   });
 };

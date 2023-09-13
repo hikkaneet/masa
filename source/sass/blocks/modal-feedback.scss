@@ -76,10 +76,10 @@
     right: 30px;
     margin: 0;
     padding: 0;
-    border: 0;
+    border: 1px solid $color-transparent;
     background-color: $color-transparent;
-    width: 22px;
-    height: 22px;
+    width: 23px;
+    height: 23px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +88,19 @@
     @include vp-767 {
       top: 20px;
       right: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      & svg {
+        stroke: rgba($color-cerulean-blue, 0.6)
+      }
+    }
+
+    &:active {
+      & svg {
+        stroke: $color-endeavour;
+      }
     }
   }
 
@@ -160,6 +173,36 @@
     gap: 12px;
   }
 
+  &__select-wrapper {
+    &:hover {
+      .modal-feedback__label {
+        color: rgba($color-charcoal, 1);
+      }
+
+      & button {
+        border: 1px solid $color-charcoal;
+
+        & svg {
+          stroke: $color-charcoal;
+        }
+      }
+    }
+
+    &:focus-within {
+      .custom-select__button {
+        color: rgba($color-charcoal, 1);
+      }
+    }
+
+    &:disabled {
+      & input,
+      textarea {
+        pointer-events: none;
+        opacity: 0.3;
+      }
+    }
+  }
+
   &__submit-button {
     margin: 15px auto 0;
     width: fit-content;
@@ -190,7 +233,6 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
-    color: $color-charcoal;
-    opacity: 0.8;
+    color: rgba($color-charcoal, 0.8);
   }
 }

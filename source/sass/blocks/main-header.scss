@@ -15,42 +15,20 @@
     padding: 20px 0 20px;
   }
 
-  &--menu-mode {
-    z-index: 1001;
 
-    & .main-header__logo {
-      position: relative;
-      cursor: default;
-      pointer-events: none;
-
-      &::before {
-        position: absolute;
-        content: "";
-        width: 54px;
-        height: 54px;
-        top: -1px;
-        left: -1px;
-        background-color: rgba($color-default-black, 0.8);
-        border-radius: 50%;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-        &::after {
-          display: none;
-        }
-      }
-    }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-}
 
-.main-header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &__logo {
+    display: block;
 
-.main-header__logo {
-  display: block;
+    @include fv-off;
+  }
+
+  &__button {
+    @include fv-off;
+  }
 }

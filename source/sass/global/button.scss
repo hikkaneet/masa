@@ -19,6 +19,8 @@
     gap: 10px;
   }
 
+  @include fv-off;
+
   &__text {
     font-size: 14px;
     font-weight: 500;

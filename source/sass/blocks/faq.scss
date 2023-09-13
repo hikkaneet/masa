@@ -48,6 +48,8 @@
     cursor: pointer;
     transition: gap ease-in-out 0.3s;
 
+    @include fv-off;
+
     &:hover,
     &:focus {
       background-color: $color-default-white;
@@ -125,6 +127,8 @@
     border-radius: 50%;
     box-sizing: border-box;
     flex-shrink: 0;
+
+    @include fv-off;
   }
 
   &__item-button-plus {
@@ -168,7 +172,7 @@
   }
 }
 
-.accordion-item {
+.faq__accordion-item {
   border-radius: 16px;
 
   &.is-active {

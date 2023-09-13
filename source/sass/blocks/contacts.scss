@@ -59,8 +59,7 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
-    min-width: fit-content;
-    max-width: 400px;
+    max-width: 50%;
 
     @include vp-1199 {
       gap: 18px;
@@ -68,6 +67,7 @@
 
     @include vp-767 {
       gap: 4px;
+      max-width: 100%;
     }
   }
 
