@@ -103,6 +103,7 @@
     line-height: 28px;
     color: $color-cerulean-blue;
     width: 70%;
+    text-align: left;
 
     @include vp-1199 {
       font-size: 22px;
@@ -161,6 +162,7 @@
     font-weight: 400;
     line-height: 26px;
     color: $color-cerulean-blue;
+    text-align: left;
 
     @include vp-1199 {
       line-height: 20px;
@@ -192,10 +194,28 @@
       &:hover,
       &:focus {
         background-color: $color-cerulean-blue;
+
+        .faq__item-button {
+          background-color: $color-cerulean-blue;
+          border: 1px solid $color-default-white;
+
+          svg { /* stylelint-disable */ //Необходимо для стилизации по стайлгайду
+            stroke: $color-default-white;
+          } /* stylelint-enable */
+        }
       }
 
       &:active {
         background-color: $color-endeavour;
+
+        .faq__item-button {
+          background-color: $color-default-white;
+          border: 1px solid $color-default-white;
+
+          svg { /* stylelint-disable */ //Необходимо для стилизации по стайлгайду
+            stroke: $color-cerulean-blue;
+          } /* stylelint-enable */
+        }
       }
     }
 

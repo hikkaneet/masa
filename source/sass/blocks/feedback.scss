@@ -46,18 +46,17 @@
     position: relative;
     z-index: 2;
     background-color: $color-cerulean-blue;
-    max-width: 40%;
+    width: 498px;
     padding: 80px 74px 50px;
     border-radius: 16px;
 
     @include vp-1199 {
       padding: 60px 45px 58px;
-      max-width: 65%;
+      width: 442px;
     }
 
     @include vp-767 {
       padding: 50px 15px;
-      max-width: 100%;
       width: 100%;
     }
   }

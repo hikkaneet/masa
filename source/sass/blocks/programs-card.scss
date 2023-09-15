@@ -2,17 +2,20 @@
   position: relative;
   border-radius: 12px;
   min-height: 420px;
+  aspect-ratio: 392/420;
 
   @include vp-1199 {
     max-width: 324px;
     width: calc(48% - 2px) !important; /* stylelint-disable-line */ //Переназначает стандартные настройки swiper
+    aspect-ratio: 324/420;
   }
 
   @include vp-767 {
     min-height: 398px;
     width: 100% !important; /* stylelint-disable-line */ //Переназначает стандартные настройки swiper
+    aspect-ratio: 290/400;
   }
-
+    
   @media (min-width: 1441px) {
     max-width: 392px;
   }
@@ -41,9 +44,9 @@
     }
 
     & img {
-      object-fit: cover;
-      width: auto;
+      width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -76,6 +79,7 @@
     background: $color-default-white;
     position: relative;
     max-width: 55%;
+    min-width: fit-content;
 
     &::after {
       position: absolute;

@@ -3,5 +3,8 @@
     position: relative;
     min-width: 320px;
     background-color: $color-alabaster;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
 }

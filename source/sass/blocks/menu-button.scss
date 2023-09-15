@@ -12,8 +12,8 @@
   gap: 20px;
   cursor: pointer;
   transition: 0.3s linear;
-  position: relative;
-  z-index: 1001;
+
+  @include fv-off;
 
   &__text {
     font-size: 14px;
@@ -112,6 +112,13 @@
 
     @include vp-767 {
       width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      & .menu-button__text {
+        color: rgba($color-default-white, 0.8);
+      }
     }
   }
 }

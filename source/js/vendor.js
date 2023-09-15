@@ -186,6 +186,12 @@ const initNewsSwiper = () => {
       event.target.classList.add('is-active');
     }
   });
+
+  tabList.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.target.click();
+    }
+  });
 };
 
 const initReviewsSwiper = () => {

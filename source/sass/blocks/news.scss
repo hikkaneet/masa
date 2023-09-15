@@ -31,6 +31,12 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 28px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     @include vp-1199 {
       margin: 0;
@@ -58,6 +64,8 @@
     box-sizing: border-box;
     cursor: pointer;
 
+    @include fv-off;
+
     @include vp-1199 {
       padding: 12px 19px 10px;
     }
@@ -70,7 +78,7 @@
     }
 
     &:hover,
-    :focus {
+    &:focus {
       border: 1px solid $color-transparent;
       color: $color-cerulean-blue;
     }

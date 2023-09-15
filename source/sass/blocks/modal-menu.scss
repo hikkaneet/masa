@@ -119,6 +119,7 @@
     &--closed {
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       height: 0;
+      padding: 0;
     }
   }
 
@@ -142,13 +143,14 @@
   }
 
   &__sub-button {
-    margin: 0 0 0 10px;
+    margin: 0;
     padding: 0;
     border: 0;
     background: 0;
     cursor: pointer;
 
     & svg {
+      margin: 0 0 0 10px;
       stroke: rgba($color-default-white, 0.6);
       transition: 0.3s linear;
     }
@@ -156,11 +158,17 @@
     @include fv-off;
 
     &--rotated {
-      transform: rotate(180deg);
+      & svg {
+        transform: rotate(180deg);
+      }
     }
 
     &:hover,
     &:focus {
+      & .modal-menu__link {
+        color: rgba($color-default-white, 1);
+      }
+
       & svg {
         stroke: rgba($color-default-white, 1);
       }

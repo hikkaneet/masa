@@ -28,8 +28,14 @@
       height: 100%;
       z-index: 1;
 
-      & .hero__slide {
-        width: 100%;
+      & .swiper-wrapper {
+        width: 100% !important; /* stylelint-disable-line */ //Переназначение стилей swiper
+        height: 100% !important; /* stylelint-disable-line */ //Переназначение стилей swiper
+      }
+
+      & .swiper-slide {
+        width: 100% !important; /* stylelint-disable-line */ //Переназначение стилей swiper
+        height: 100% !important; /* stylelint-disable-line */ //Переназначение стилей swiper
       }
     }
 
@@ -59,6 +65,7 @@
   &__slide-bg {
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background-color: #88aacd;
     position: relative;
 
@@ -74,16 +81,10 @@
     }
 
     & img {
-      object-fit: cover;
+      max-width: none;
       width: 100%;
-      height: auto;
-    }
-
-    @media (min-width: 1200px) and (max-width: 1440px) {
-      & img {
-        width: auto;
-        height: 100%;
-      }
+      height: 100%;
+      object-fit: cover;
     }
   }
 

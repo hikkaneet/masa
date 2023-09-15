@@ -23,7 +23,7 @@ const toggleSubmenu = () => {
       const subLinks = subMenu.querySelectorAll('.modal-menu__sub-link');
 
       subLinks.forEach((subLink) => {
-        subLink.tabIndex = subMenu.classList.contains('modal-menu__sub-menu--closed') ? -1 : 1;
+        subLink.tabIndex = subMenu.classList.contains('modal-menu__sub-menu--closed') ? -1 : 0;
       });
     });
   });
